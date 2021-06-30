@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles.fonts.scss";
+@import "styles.null.scss";
+
+body {
+  background-color: #252525;
+  padding: 0;
+  // width: 100vw;
+  font-family: "montserrat";
+}
+.container {
+  // padding: 0 150px;
+  padding: 0 8vw;
+  // width: max-content;
+  width: -webkit-fill-available;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
