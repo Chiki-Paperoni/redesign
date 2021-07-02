@@ -5,7 +5,9 @@ import { MainComponent } from './main/main.component';
 const routes: Routes = [{ path: '', component: MainComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
