@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    MainComponent
+    MainComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

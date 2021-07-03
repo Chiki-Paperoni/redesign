@@ -1,0 +1,43 @@
+.container {
+  padding-top: 12vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3vw;
+}
+h1 {
+  font-size: 4vw;
+  margin-bottom: 5vw;
+}
+.text {
+  font-size: 2.5vw;
+  margin-bottom: 5vw;
+}
+h2 {
+  font-size: 3.2vw;
+  margin-bottom: 5vw;
+}
+.back {
+  display: flex;
+  align-items: center;
+  font-size: 2.5vw;
+  svg {
+    width: 2vw;
+    min-width: 24px;
+    color: white;
+    margin-right: 16px;
+  }
+}
+footer {
+  padding: 7vw 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    height: 2vw;
+    min-height: 16px;
+  }
+  span {
+    font-size: 18px;
+    margin-left: 12px;
+  }
+}
