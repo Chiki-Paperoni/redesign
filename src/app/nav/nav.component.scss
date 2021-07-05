@@ -1,4 +1,5 @@
 nav {
+  width: 100vw;
   position: absolute;
   display: flex;
   align-items: center;
@@ -19,19 +20,27 @@ nav {
       margin-left: 2.4vw;
     }
   }
-
   .button {
     cursor: pointer;
     &:hover {
       border-color: transparent;
+      // background-image: linear-gradient(
+      //     217deg,
+      //     rgba(255, 0, 0, 0.8),
+      //     rgba(255, 0, 0, 0) 70.71%
+      //   ),
+      //   linear-gradient(127deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%),
+      //   linear-gradient(336deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%);
       background-image: linear-gradient(
-          217deg,
-          rgba(255, 0, 0, 0.8),
-          rgba(255, 0, 0, 0) 70.71%
-        ),
-        linear-gradient(127deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%),
-        linear-gradient(336deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%);
-      background-size: 200% 300%;
+        90deg,
+        #b042e4,
+        #2d33e4,
+        #b042e4,
+        #36ecd6,
+        #9a23b8,
+        #56e6fa
+      );
+      background-size: 400% 400%;
     }
     background: none;
     color: white;
@@ -47,19 +56,97 @@ nav {
     /* margin-left: 90px; */
     margin-left: 3.5vw;
     // animation: hue 8s linear 1s infinite;
-    animation: 10s infinite granimate;
+    animation: 20s infinite granimate;
+  }
+  #popup {
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    height: 100vh;
+    background: #252525c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      width: 40%;
+      padding: 3vw 6.8vw;
+      background: #252525;
+      border: 4px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 2.5vw;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-weight: 500;
+        font-size: 2.5vw;
+        line-height: 130%;
+        text-align: center;
+      }
+      input {
+        font-size: 1.3vw;
+        background: none;
+        border: 5px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 2.5vw;
+        padding: 1vw 2.5vw;
+        margin-bottom: 1.5vw;
+        color: white;
+      }
+      input::placeholder {
+        color: white;
+      }
+      label {
+        font-size: 1.3vw;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 1.8vw;
+        padding: 1.2vw 6vw;
+        background: linear-gradient(
+          180deg,
+          rgba(158, 0, 255, 0.7) 0%,
+          #4cd4ff 100%
+        );
+        border-radius: 5vw;
+        color: white;
+        margin-top: 2vw;
+      }
+    }
   }
 }
 @keyframes granimate {
-  0%,
-  100% {
-    background-position: 0 25%;
-  }
-  25%,
-  75% {
-    background-position: 50% 50%;
+  0% {
+    background-position: 10% 0%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }

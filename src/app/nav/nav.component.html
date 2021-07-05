@@ -6,6 +6,16 @@
     <a href="#who">Кто мы</a>
     <a href="#cases">Кейсы</a>
   </div>
-  <div class="button">ПРОЕКТ</div>
+  <div class="button" (click)="showPopup()">ПРОЕКТ</div>
   <!-- <button>ПРОЕКТ</button> -->
+  <div id="popup" *ngIf="isPopupShown" (click)="hidePopup()">
+    <form action="" autocomplete="off" appClickPropagationStope>
+      <h3>Готовы обсудить свой проект?</h3>
+      <label for="name">Имя</label>
+      <input type="text" name="name" placeholder="Artemiy" />
+      <label for="phone">Куда звонить</label>
+      <input type="text" name="phone" placeholder="+380" />
+      <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+  </div>
 </nav>
