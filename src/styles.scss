@@ -2,12 +2,16 @@
 @import "styles.fonts.scss";
 @import "styles.null.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #252525;
   padding: 0;
   color: white;
   // width: 100vw;
   font-family: "rubik";
+  font-weight: 500;
 }
 pre {
   font-family: "rubik";
@@ -21,4 +25,17 @@ pre {
 a {
   text-decoration: none;
   color: white;
+}
+@keyframes granimate {
+  0%,
+  100% {
+    background-position: 0 25%;
+  }
+  25%,
+  75% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
 }

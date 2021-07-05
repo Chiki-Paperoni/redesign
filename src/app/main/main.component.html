@@ -1,17 +1,18 @@
+<app-nav></app-nav>
 <app-header></app-header>
 <div class="container">
   <section id="what">
     <h2>
       <pre>
 Совмещаем ваши <span>идеи</span>
-          с нашей <span>реализацией</span>
+                            с нашей <span>реализацией</span>
       </pre>
     </h2>
     <div class="cards">
       <div class="card">
         <h2>Лендинг</h2>
         <p>
-          Красивый динамичный сайт, который увеличит продажи и конверсию в
+          Одностраничный динамичный сайт, который увеличит продажи и конверсию в
           кратчайшие сроки.
         </p>
         <div class="info">
@@ -50,7 +51,7 @@
           создание уникальных креативов.
         </p>
         <div class="info">
-          <span class="terms">21 day</span>
+          <span class="terms"></span>
           <span class="price"
             >$500<span style="color: white"> / месяц</span></span
           >
@@ -148,6 +149,27 @@
 между дизайном и технологиями 
       </pre>
     </h2>
+    <div class="row">
+      <img src="/assets/img/group1.png" alt="" />
+      <div class="info">
+        <div>Даня</div>
+        <span>Project Manager</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <div>Даша</div>
+        <span>UI/UX Designer</span>
+      </div>
+      <img src="/assets/img/group2.png" alt="" />
+    </div>
+    <div class="row">
+      <img src="/assets/img/group3.png" alt="" />
+      <div class="info">
+        <div>Жэка</div>
+        <span>Frontend Developer</span>
+      </div>
+    </div>
   </section>
 </div>
 
@@ -159,6 +181,16 @@
       ><span><img src="/assets/img/instagram.svg" alt="" /></span>
     </div>
   </div>
+</div>
+<div id="form">
+  <form action="" autocomplete="off">
+    <h3>Готовы обсудить свой проект?</h3>
+    <label for="name">Имя</label>
+    <input type="text" name="name" placeholder="Artemiy" />
+    <label for="phone">Куда звонить</label>
+    <input type="text" name="phone" placeholder="+380" />
+    <button type="submit">ОТПРАВИТЬ</button>
+  </form>
 </div>
 
 <footer>
@@ -172,7 +204,7 @@
       </span>
       <span class="terms">
         <span>© 2021</span>
-        <a href="">Угода користувача</a>
+        <a routerLink="/terms">Угода користувача</a>
       </span>
     </div>
     <div class="col2">
