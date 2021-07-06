@@ -73,9 +73,11 @@ nav {
     height: 100vh;
     background: #252525c4;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
+    overflow: auto;
     form {
+      margin: auto;
       width: 40%;
       padding: 3vw 6.8vw;
       background: #252525;
