@@ -9,7 +9,7 @@
   <div class="button" (click)="showPopup()">ПРОЕКТ</div>
   <!-- <button>ПРОЕКТ</button> -->
   <div id="popup" *ngIf="isPopupShown" (click)="hidePopup()">
-    <form action="" autocomplete="off" appClickPropagationStope>
+    <form action="" autocomplete="off" appClickPropagationStop>
       <h3>Готовы обсудить свой проект?</h3>
       <label for="name">Имя</label>
       <input type="text" name="name" placeholder="Артемий" />

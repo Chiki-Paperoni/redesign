@@ -8,7 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { TermsComponent } from './terms/terms.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { ClickPropagationStopeDirective } from './click-propagation-stope.directive';
+import { ClickPropagationStopDirective } from './click-propagation-stop.directive';
 
 @NgModule({
   declarations: [
@@ -18,13 +18,13 @@ import { ClickPropagationStopeDirective } from './click-propagation-stope.direct
     MainComponent,
     TermsComponent,
     NotfoundComponent,
-    ClickPropagationStopeDirective
+    ClickPropagationStopDirective,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
