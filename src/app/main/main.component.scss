@@ -65,6 +65,11 @@ section {
   h2 {
     margin-bottom: 6vw;
   }
+  .aos-animate {
+    .curtains {
+      padding-top: 12vw !important;
+    }
+  }
   .step {
     margin-bottom: 1.8vw;
     .title {
@@ -86,6 +91,18 @@ section {
     .right {
       flex-direction: row-reverse;
     }
+
+    .curtains {
+      position: absolute;
+      height: 12vw;
+      transition: 1.8s;
+      width: 140px;
+      .bg {
+        width: 100%;
+        height: 100%;
+        background: #252525;
+      }
+    }
     .arrow {
       display: flex;
       img {
@@ -97,14 +114,21 @@ section {
 #who {
   .row {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    // align-items: center;
+    justify-content: space-between;
     img {
+      width: 48vw;
+      // height: 48vw;
+      transition: 0.3s;
+    }
+    img:hover {
       width: 50vw;
+      filter: drop-shadow(0 0 247px #3137f8);
     }
     .info {
       display: flex;
       flex-direction: column;
+      margin: auto 0;
       div {
         font-size: 4.5vw;
       }
