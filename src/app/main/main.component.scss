@@ -114,17 +114,44 @@ section {
 #who {
   .row {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
-    img {
-      width: 48vw;
-      // height: 48vw;
+    .who1 {
+      background: no-repeat;
+      background-image: url(/assets/img/who1.png), url(/assets/img/frame1.png),
+        url(/assets/img/blur1.png);
+      background-size: 85%, 100%, 105%;
+      background-position: 50% 50%, 0 0, 0 190%;
+    }
+    .who2 {
+      background: no-repeat;
+      background-image: url(/assets/img/who2.png), url(/assets/img/frame2.png),
+        url(/assets/img/blur2.png);
+      background-size: 85%, 100%, 105%;
+      background-position: 50% 50%, 0 0, 140% 282%;
+    }
+    .who3 {
+      background: no-repeat;
+      background-image: url(/assets/img/who3.png), url(/assets/img/frame3.png),
+        url(/assets/img/blur1.png);
+      background-size: 85%, 100%, 105%;
+      background-position: 50% 50%, 0 0, 0 190%;
+    }
+    .triang {
       transition: 0.3s;
+
+      width: 45vw;
+      height: 45vw;
     }
-    img:hover {
-      width: 50vw;
-      filter: drop-shadow(0 0 247px #3137f8);
+    .who1:hover,
+    .who3:hover {
+      background-size: 100%, 100%, 105%;
+      filter: drop-shadow(0 0 240px #3137f8);
     }
+    .who2:hover {
+      background-size: 100%, 100%, 105%;
+      filter: drop-shadow(0 0 240px #c64cff);
+    }
+
     .info {
       display: flex;
       flex-direction: column;
@@ -187,8 +214,6 @@ section {
 }
 .inst {
   padding: 5.5vw 0;
-  // background: url("/assets/img/instbg.svg") no-repeat center;
-  // background-size: cover;
   background: url(/assets/img/instbg.svg) no-repeat;
   background-position: center;
   background-size: 100%;
@@ -210,10 +235,6 @@ section {
     span img {
       width: 5.8vw;
     }
-
-    // padding: 5vw 10vw;
-    // font-size: 3.3vw;
-    // padding: 14vw 13vw;
   }
 }
 footer {

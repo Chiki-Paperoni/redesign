@@ -7,6 +7,7 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import axios from 'axios';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -23,12 +24,27 @@ export function app(): express.Express {
       bootstrap: AppServerModule,
     })
   );
-
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: false }));
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  server.post('/api/post', (req, res) => {
+    const data = JSON.stringify(req.body);
+    axios
+      .post(
+        'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001244564444&parse_mode=html&text=' +
+          data
+      )
+      .then(() => {
+        res.status(200);
+        res.end();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
   // Serve static files from /browser
   server.get(
     '*.*',

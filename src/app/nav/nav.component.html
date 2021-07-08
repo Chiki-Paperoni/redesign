@@ -9,13 +9,35 @@
   <div class="button" (click)="showPopup()">ПРОЕКТ</div>
   <!-- <button>ПРОЕКТ</button> -->
   <div id="popup" *ngIf="isPopupShown" (click)="hidePopup()">
-    <form action="" autocomplete="off" appClickPropagationStop>
+    <form
+      [formGroup]="orderForm"
+      (ngSubmit)="onSubmit()"
+      autocomplete="off"
+      appClickPropagationStop
+    >
       <h3>Готовы обсудить свой проект?</h3>
       <label for="name">Имя</label>
-      <input type="text" name="name" placeholder="Артемий" />
+      <input
+        type="text"
+        name="name"
+        placeholder="Артемий"
+        minlength="2"
+        maxlength="32"
+        required
+        formControlName="name"
+      />
       <label for="phone">Куда звонить</label>
-      <input type="text" name="phone" placeholder="+380" value="+380" />
-      <button type="submit">ОТПРАВИТЬ</button>
+      <input
+        type="text"
+        name="phone"
+        required
+        placeholder="+380"
+        maxlength="13"
+        minlength="10"
+        formControlName="phone"
+        appDigitOnly
+      />
+      <button [disabled]="!orderForm.valid" type="submit">ОТПРАВИТЬ</button>
     </form>
   </div>
 </nav>

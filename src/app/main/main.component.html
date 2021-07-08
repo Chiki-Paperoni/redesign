@@ -201,7 +201,7 @@
       </pre>
     </h2>
     <div class="row">
-      <img src="/assets/img/group1.png" alt="" />
+      <div class="triang who1"></div>
       <div class="info">
         <div>Даня</div>
         <span>Project Manager</span>
@@ -212,15 +212,22 @@
         <div>Даша</div>
         <span>UI/UX Designer</span>
       </div>
-      <img src="/assets/img/group2.png" alt="" />
+      <div class="triang who2"></div>
     </div>
     <div class="row">
-      <img src="/assets/img/group3.png" alt="" />
+      <div class="triang who3"></div>
       <div class="info">
         <div>Жэка</div>
         <span>Frontend Developer</span>
       </div>
     </div>
+    <!-- <div class="row">
+      <img src="/assets/img/group3.png" alt="" />
+      <div class="info">
+        <div>Жэка</div>
+        <span>Frontend Developer</span>
+      </div>
+    </div> -->
   </section>
 </div>
 
@@ -234,13 +241,30 @@
   </div>
 </div>
 <div id="form">
-  <form action="" autocomplete="off">
+  <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" autocomplete="off">
     <h3>Готовы обсудить свой проект?</h3>
     <label for="name">Имя</label>
-    <input type="text" name="name" placeholder="Артемий" />
+    <input
+      type="text"
+      name="name"
+      placeholder="Артемий"
+      minlength="2"
+      maxlength="32"
+      required
+      formControlName="name"
+    />
     <label for="phone">Куда звонить</label>
-    <input type="text" name="phone" placeholder="+380" value="+380" />
-    <button type="submit">ОТПРАВИТЬ</button>
+    <input
+      type="text"
+      name="phone"
+      placeholder="+380"
+      value="+380"
+      maxlength="13"
+      minlength="10"
+      formControlName="phone"
+      appDigitOnly
+    />
+    <button type="submit" [disabled]="!orderForm.valid">ОТПРАВИТЬ</button>
   </form>
 </div>
 

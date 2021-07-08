@@ -1,6 +1,11 @@
 import { AotSummaryResolver } from '@angular/compiler';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
 import * as AOS from 'aos';
+import { Inject } from '@angular/core';
+import { PostOrderService } from '../post-order.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -8,12 +13,34 @@ import * as AOS from 'aos';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  orderForm = this.formBuilder.group({
+    name: '',
+    phone: '',
+  });
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private formBuilder: FormBuilder,
+    private service: PostOrderService
+  ) {}
 
   ngOnInit(): void {
-    AOS.init();
+    this.orderForm.setValue({
+      name: '',
+      phone: '+380',
+    });
   }
   ngAfterViewInit() {
-    AOS.init();
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init();
+    }
+  }
+  onSubmit(): void {
+    this.service.postOrder(this.orderForm.value).subscribe((data) => {
+      this.orderForm.setValue({
+        name: '',
+        phone: '+380',
+      });
+    });
   }
 }
