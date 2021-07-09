@@ -20,7 +20,6 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.isPopupShown);
     this.orderForm.setValue({
       name: '',
       phone: '+380',
