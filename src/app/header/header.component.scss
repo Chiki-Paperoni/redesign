@@ -5,10 +5,9 @@ header {
   background-size: cover;
   .container {
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     color: white;
-    // padding-top: 60px;
-    padding-top: 6.5vh;
+    // padding-top: 6.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -16,9 +15,7 @@ header {
       img {
         height: 75px;
       }
-      //margin-top: auto;
       align-self: flex-end;
-      // margin-bottom: 4vw;
       cursor: pointer;
     }
   }
