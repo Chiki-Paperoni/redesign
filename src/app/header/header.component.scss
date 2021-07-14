@@ -3,53 +3,40 @@ header {
   width: 100vw;
   background: url("/assets/img/Background.png") no-repeat center;
   background-size: cover;
-  .container {
-    width: 100%;
-    // min-height: 100vh;
-    color: white;
-    // padding-top: 6.5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  position: relative;
+  .absolute {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
     .arrow {
       img {
-        height: 75px;
+        height: 4rem;
+        min-height: 60px;
       }
       align-self: flex-end;
       cursor: pointer;
     }
   }
+  .container {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
   .caption {
-    font-size: 5.4vw;
+    font-size: 5.4rem;
     margin-top: 17vh;
     font-weight: 500;
-    // font-size: 105px;
     line-height: 130%;
   }
 }
-// @media screen and (max-width: 600px) {
-//   header {
-//     nav {
-//       img {
-//         width: 22vw;
-//       }
-//       .sections {
-//         a {
-//           font-size: 3vw;
-//           margin-left: 5vw;
-//         }
-//       }
 
-//       button {
-//         font-size: 2vw;
-//         padding: 1vw;
-//         margin-left: 3.5vw;
-//       }
-//     }
-//     .caption {
-//       font-size: 5.5vw;
-//       margin-top: 17vh;
-//     }
-//   }
-// }
+@media screen and(max-width:856px) {
+  header {
+    .caption {
+      font-size: 7.6rem;
+    }
+  }
+}

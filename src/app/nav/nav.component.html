@@ -1,43 +1,84 @@
-<nav class="container">
-  <a routerLink="/"><img src="/assets/img/logo.svg" alt="" srcset="" /></a>
-  <div class="sections">
-    <a href="#what">Что делаем</a>
-    <a href="#how">Как делаем</a>
-    <a href="#who">Кто мы</a>
-    <a href="#cases">Кейсы</a>
-  </div>
-  <div class="button" (click)="showPopup()">ПРОЕКТ</div>
-  <!-- <button>ПРОЕКТ</button> -->
-  <div id="popup" *ngIf="isPopupShown" (click)="hidePopup()">
-    <form
-      [formGroup]="orderForm"
-      (ngSubmit)="onSubmit()"
-      autocomplete="off"
-      appClickPropagationStop
+<div class="background" [style]="mobileBgStyle">
+  <nav class="container">
+    <a routerLink="/"
+      ><img class="imgLogo" src="/assets/img/logo.svg" alt="" srcset=""
+    /></a>
+    <div class="sections">
+      <a href="#what">Что делаем</a>
+      <a href="#how">Как делаем</a>
+      <a href="#who">Кто мы</a>
+      <a href="#cases">Кейсы</a>
+    </div>
+    <div class="button" (click)="showPopup()">ПРОЕКТ</div>
+    <img
+      class="imgMenu"
+      src="/assets/img/Menu.png"
+      alt=""
+      (click)="TogleMobileMenu()"
+    />
+    <div id="popup" *ngIf="isPopupShown" (click)="hidePopup()">
+      <form
+        [formGroup]="orderForm"
+        (ngSubmit)="onSubmit()"
+        autocomplete="off"
+        appClickPropagationStop
+      >
+        <h3>Готовы обсудить свой проект?</h3>
+        <label for="name">Имя</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Артемий"
+          minlength="2"
+          maxlength="32"
+          required
+          formControlName="name"
+        />
+        <label for="phone">Телефон</label>
+        <input
+          type="text"
+          name="phone"
+          required
+          placeholder="+380"
+          maxlength="13"
+          minlength="10"
+          formControlName="phone"
+          appDigitOnly
+        />
+        <button [disabled]="!orderForm.valid" type="submit">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+    <div
+      class="success"
+      *ngIf="popupsSuccess"
+      (click)="this.popupsSuccess = false"
     >
-      <h3>Готовы обсудить свой проект?</h3>
-      <label for="name">Имя</label>
-      <input
-        type="text"
-        name="name"
-        placeholder="Артемий"
-        minlength="2"
-        maxlength="32"
-        required
-        formControlName="name"
-      />
-      <label for="phone">Куда звонить</label>
-      <input
-        type="text"
-        name="phone"
-        required
-        placeholder="+380"
-        maxlength="13"
-        minlength="10"
-        formControlName="phone"
-        appDigitOnly
-      />
-      <button [disabled]="!orderForm.valid" type="submit">ОТПРАВИТЬ</button>
-    </form>
+      <div class="message" appClickPropagationStop>
+        <span class="text">Данные отправлены ✅ Мы скоро с вами свяжемся</span>
+        <button (click)="this.popupsSuccess = false">ОКЕЙ</button>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="mobileMenu container"
+    [style]="mobileMenuStyle"
+    (click)="TogleMobileMenu()"
+  >
+    <div class="links">
+      <div class="link"><a href="#what">Что делаем</a></div>
+      <div class="link"><a href="/">Кейсы</a></div>
+      <div class="link"><a href="#how">Как делаем</a></div>
+      <div class="link"><a href="#who">Кто мы</a></div>
+      <div class="link"><a href="#form">Контакты</a></div>
+    </div>
+    <div class="bottom">
+      <div class="phone"><a href="tel:+380508494970">+380 50 849-49-70</a></div>
+      <div class="email">katrukdesign@gmail.com</div>
+
+      <div class="langs">
+        <a href="">Рус/</a>
+        <a href="">Укр</a>
+      </div>
+    </div>
   </div>
-</nav>
+</div>

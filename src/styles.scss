@@ -4,14 +4,12 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 1vw;
 }
 body {
-  // width: 100vw;
-  overflow-x: hidden;
   background-color: #252525;
   padding: 0;
   color: white;
-  // width: 100vw;
   font-family: "rubik";
   font-weight: 500;
 }
@@ -19,10 +17,8 @@ pre {
   font-family: "rubik";
 }
 .container {
-  // padding: 0 150px;
-  padding: 0 8vw;
-  // width: max-content;
-  width: -webkit-fill-available;
+  margin: 0 auto;
+  max-width: 78rem;
 }
 a {
   text-decoration: none;
@@ -39,5 +35,17 @@ a {
   }
   50% {
     background-position: 100% 100%;
+  }
+}
+
+@media screen and(max-width:856px) {
+  .container {
+    max-width: 82rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  html {
+    font-size: 19.2px;
   }
 }
