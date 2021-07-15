@@ -4,12 +4,12 @@
       ><img class="imgLogo" src="/assets/img/logo.svg" alt="" srcset=""
     /></a>
     <div class="sections">
-      <a href="#what">Что делаем</a>
-      <a href="#how">Как делаем</a>
-      <a href="#who">Кто мы</a>
-      <a href="#cases">Кейсы</a>
+      <a href="#what">{{ "DoWhat" | translate }}</a>
+      <a href="#how">{{ "DoHow" | translate }}</a>
+      <a href="#who">{{ "WhoAre" | translate }}</a>
+      <a href="#cases">{{ "Cases" | translate }}</a>
     </div>
-    <div class="button" (click)="showPopup()">ПРОЕКТ</div>
+    <div class="button" (click)="showPopup()">{{ "Project" | translate }}</div>
     <img
       class="imgMenu"
       src="/assets/img/Menu.png"
@@ -23,29 +23,31 @@
         autocomplete="off"
         appClickPropagationStop
       >
-        <h3>Готовы обсудить свой проект?</h3>
-        <label for="name">Имя</label>
+        <h3>{{ "Popup.title" | translate }}</h3>
+        <label for="name">{{ "Popup.name.text" | translate }}</label>
         <input
           type="text"
           name="name"
-          placeholder="Артемий"
+          placeholder="{{ 'Popup.name.placeholder' | translate }}"
           minlength="2"
           maxlength="32"
           required
           formControlName="name"
         />
-        <label for="phone">Телефон</label>
+        <label for="phone">{{ "Popup.phone.text" | translate }}</label>
         <input
           type="text"
           name="phone"
           required
-          placeholder="+380"
+          placeholder="{{ 'Popup.phone.placeholder' | translate }}"
           maxlength="13"
           minlength="10"
           formControlName="phone"
           appDigitOnly
         />
-        <button [disabled]="!orderForm.valid" type="submit">ОТПРАВИТЬ</button>
+        <button type="submit">
+          {{ "Popup.send" | translate }}
+        </button>
       </form>
     </div>
     <div
@@ -54,8 +56,10 @@
       (click)="this.popupsSuccess = false"
     >
       <div class="message" appClickPropagationStop>
-        <span class="text">Данные отправлены ✅ Мы скоро с вами свяжемся</span>
-        <button (click)="this.popupsSuccess = false">ОКЕЙ</button>
+        <span class="text"> {{ "success.text" | translate }}</span>
+        <button (click)="this.popupsSuccess = false">
+          {{ "success.send" | translate }}
+        </button>
       </div>
     </div>
   </nav>
@@ -65,19 +69,29 @@
     (click)="TogleMobileMenu()"
   >
     <div class="links">
-      <div class="link"><a href="#what">Что делаем</a></div>
-      <div class="link"><a href="/">Кейсы</a></div>
-      <div class="link"><a href="#how">Как делаем</a></div>
-      <div class="link"><a href="#who">Кто мы</a></div>
-      <div class="link"><a href="#form">Контакты</a></div>
+      <div class="link">
+        <a href="#what">{{ "DoWhat" | translate }}</a>
+      </div>
+      <div class="link">
+        <a href="#cases">{{ "Cases" | translate }}</a>
+      </div>
+      <div class="link">
+        <a href="#how">{{ "DoHow" | translate }}</a>
+      </div>
+      <div class="link">
+        <a href="#who">{{ "WhoAre" | translate }}</a>
+      </div>
+      <div class="link">
+        <a href="#form">{{ "Contacts" | translate }}</a>
+      </div>
     </div>
     <div class="bottom">
       <div class="phone"><a href="tel:+380508494970">+380 50 849-49-70</a></div>
       <div class="email">katrukdesign@gmail.com</div>
 
       <div class="langs">
-        <a href="">Рус/</a>
-        <a href="">Укр</a>
+        <a routerLink="/ru" (click)="switchRu()">Рус/</a>
+        <a routerLink="/ua" (click)="switchUa()">Укр</a>
       </div>
     </div>
   </div>

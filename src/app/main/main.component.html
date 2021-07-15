@@ -3,8 +3,8 @@
   <section id="what">
     <h2>
       <pre>
-Совмещаем ваши <span>идеи</span>
-                      с нашей <span>реализацией</span>
+{{"What.h2.part1"|translate}} <span>{{"What.h2.part2"|translate}}</span>
+              {{"What.h2.part3"|translate}} <span>{{"What.h2.part4"|translate}}</span>
       </pre>
     </h2>
     <div class="cards">
@@ -14,31 +14,28 @@
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <h2>Лендинг</h2>
+        <h2>{{ "What.card1.h2" | translate }}</h2>
         <p>
-          Одностраничный динамичный сайт, который увеличит продажи и конверсию в
-          кратчайшие сроки.
+          {{ "What.card1.p" | translate }}
         </p>
         <div class="info">
-          <span class="terms">21 день</span>
-          <span class="price">от $500</span>
+          <span class="terms">{{ "What.card1.terms" | translate }}</span>
+          <span class="price">{{ "What.card1.price" | translate }}</span>
         </div>
       </div>
       <div
         class="card"
         data-aos="zoom-in-up"
-        data-aos-delay="200"
-        data-aos-once="true"
         data-aos-duration="1000"
+        data-aos-once="true"
       >
-        <h2>Бизнес-сайт</h2>
+        <h2>{{ "What.card2.h2" | translate }}</h2>
         <p>
-          Представление компании в Интернете. Поможет сохранить лояльных
-          клиентов, а не просто посетителей.
+          {{ "What.card2.p" | translate }}
         </p>
         <div class="info">
-          <span class="terms">1 месяц</span>
-          <span class="price">от $1000</span>
+          <span class="terms">{{ "What.card2.terms" | translate }}</span>
+          <span class="price">{{ "What.card2.price" | translate }}</span>
         </div>
       </div>
     </div>
@@ -49,32 +46,32 @@
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <h2>Интернет-магазин</h2>
+        <h2>{{ "What.card3.h2" | translate }}</h2>
         <p>
-          Многофункциональный сайт с удобной навигацией. Повысит узнаваемость
-          бренда и упростит обработку заказов
+          {{ "What.card3.p" | translate }}
         </p>
         <div class="info">
-          <span class="terms">1,5 месяца</span>
-          <span class="price">от $1500</span>
+          <span class="terms">{{ "What.card3.terms" | translate }}</span>
+          <span class="price">{{ "What.card3.price" | translate }}</span>
         </div>
       </div>
       <div
         class="card"
         data-aos="zoom-in-up"
-        data-aos-delay="200"
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <h2>Маркетинг</h2>
+        <h2>{{ "What.card4.h2" | translate }}</h2>
         <p>
-          Запуск рекламных кампаний с учетом особенностей бизнеса. Включает
-          создание уникальных креативов.
+          {{ "What.card4.p" | translate }}
         </p>
         <div class="info">
-          <span class="terms"></span>
+          <span class="terms">{{ "What.card4.terms" | translate }}</span>
           <span class="price"
-            >$500<span style="color: white"> / месяц</span></span
+            >$500
+            <span style="color: white">{{
+              "What.card4.price" | translate
+            }}</span></span
           >
         </div>
       </div>
@@ -84,8 +81,9 @@
   <section id="how">
     <h2>
       <pre>
-Нам важен как<span> путь </span>
-                          так и <span> результат</span></pre>
+{{"How.h2.part1"|translate}} <span>{{"How.h2.part2"|translate}}</span>
+                      {{"How.h2.part3"|translate}} <span>{{"How.h2.part4"|translate}}</span>
+      </pre>
     </h2>
     <div class="steps">
       <div
@@ -95,13 +93,13 @@
         data-aos-once="true"
       >
         <div class="title">
-          <h3>Интервью и Бриф</h3>
+          <h3>{{ "How.step1.h3" | translate }}</h3>
           <img src="/assets/img/step1.svg" alt="" srcset="" />
         </div>
         <div class="description">
           <pre>
-      Обсуждаем проект и выявляем потребности
-      клиентов. Слушаем ваши идеи и беремся за дело</pre
+            {{ "How.step1.description.line1" | translate }}
+            {{ "How.step1.description.line2" | translate }}</pre
           >
         </div>
         <div class="arrow right">
@@ -116,13 +114,15 @@
         data-aos-once="true"
       >
         <div class="title">
-          <h3><pre>         UX- прототип </pre></h3>
+          <h3>
+            <pre>         {{ "How.step2.h3" | translate }} </pre>
+          </h3>
           <img src="/assets/img/step2.svg" alt="" srcset="" />
         </div>
         <div class="description">
           <pre>
-                  Создаем структуру сайта. Рисуем блоки
-                  и страницы, наполняем макет контентом</pre
+            {{ "How.step2.description.line1" | translate }}
+                    {{ "How.step2.description.line2" | translate }}</pre
           >
         </div>
         <div class="arrow">
@@ -137,13 +137,15 @@
         data-aos-once="true"
       >
         <div class="title">
-          <h3><pre>         Сочный дизайн</pre></h3>
+          <h3>
+            <pre>         {{ "How.step3.h3" | translate }}</pre>
+          </h3>
           <img src="/assets/img/step3.svg" alt="" srcset="" />
         </div>
         <div class="description">
           <pre>
-                На этом этапе придумываем продающий
-                дизайн исходя из особенностей бизнеса</pre
+                  {{ "How.step3.description.line1" | translate }}
+                  {{ "How.step3.description.line2" | translate }}</pre
           >
         </div>
         <div class="arrow right">
@@ -158,13 +160,15 @@
         data-aos-once="true"
       >
         <div class="title">
-          <h3><pre>     Программирование</pre></h3>
+          <h3>
+            <pre>     {{ "How.step4.h3" | translate }}</pre>
+          </h3>
           <img src="/assets/img/step4.svg" alt="" srcset="" />
         </div>
         <div class="description">
           <pre>
-            Верстаем и программируем сайт, а так же
-            тестируем его на работоспособность</pre
+            {{ "How.step4.description.line1" | translate }}
+            {{ "How.step4.description.line2" | translate }}</pre
           >
         </div>
         <div class="arrow">
@@ -179,13 +183,15 @@
         data-aos-once="true"
       >
         <div class="title">
-          <h3><pre>       Продвижение</pre></h3>
+          <h3>
+            <pre>       {{ "How.step5.h3" | translate }}</pre>
+          </h3>
           <img src="/assets/img/step5.svg" alt="" srcset="" />
         </div>
         <div class="description">
           <pre>
-              Оптимизируем сайт для Google чтобы
-              потенциальные клиенты могли вас найти</pre
+            {{ "How.step5.description.line1" | translate }}
+            {{ "How.step5.description.line2" | translate }}</pre
           >
         </div>
       </div>
@@ -195,28 +201,30 @@
   <section id="who">
     <h2>
       <pre>
-Мы те, кто находит <span>идеальный</span> баланс
-между дизайном и технологиями 
+{{"Who.h2.part1"|translate}} <span>{{"Who.h2.part2"|translate}}</span> {{"Who.h2.part3"|translate}}
+{{"Who.h2.part4"|translate}} 
       </pre>
     </h2>
+
     <div class="row">
-      <div class="triang who1"></div>
+      <img class="whoImg blueFilter" src="/assets/img/dn.png" alt="" />
       <div class="info">
         <div>Даня</div>
         <span>Project Manager</span>
       </div>
     </div>
+
     <div class="row">
       <div class="info">
         <div>Даша</div>
         <span>UI/UX Designer</span>
       </div>
-      <div class="triang who2"></div>
+      <img class="whoImg pinkFilter" src="/assets/img/dsh.png" alt="" />
     </div>
     <div class="row">
-      <div class="triang who3"></div>
+      <img class="whoImg blueFilter" src="/assets/img/zh.png" alt="" />
       <div class="info">
-        <div>Жэка</div>
+        <div>{{ "Who.Zhenia" | translate }}</div>
         <span>Frontend Developer</span>
       </div>
     </div>
@@ -226,7 +234,7 @@
 <div class="inst">
   <div class="text">
     <div class="container">
-      Мы активно ведем инстаграм и советуем вам подписаться
+      {{ "inst" | translate }}
       <a href="https://www.instagram.com/katrukdesign/">@katrukdesign</a
       ><span><img src="/assets/img/instagram.svg" alt="" /></span>
     </div>
@@ -234,29 +242,31 @@
 </div>
 <div id="form">
   <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" autocomplete="off">
-    <h3>Готовы обсудить свой проект?</h3>
-    <label for="name">Имя</label>
+    <h3>{{ "Popup.title" | translate }}</h3>
+    <label for="name">{{ "Popup.name.text" | translate }}</label>
     <input
       type="text"
       name="name"
-      placeholder="Артемий"
+      placeholder="{{ 'Popup.name.placeholder' | translate }}"
       minlength="2"
       maxlength="32"
       required
       formControlName="name"
     />
-    <label for="phone">Куда звонить</label>
+    <label for="phone">{{ "Popup.phone.text" | translate }}</label>
     <input
       type="text"
       name="phone"
-      placeholder="+380"
+      placeholder="{{ 'Popup.phone.placeholder' | translate }}"
       value="+380"
       maxlength="13"
       minlength="10"
       formControlName="phone"
       appDigitOnly
     />
-    <button type="submit" [disabled]="!orderForm.valid">ОТПРАВИТЬ</button>
+    <button class="mousehold" type="submit">
+      {{ "Popup.send" | translate }}
+    </button>
   </form>
 </div>
 
@@ -272,13 +282,12 @@
       <div class="row">
         <div class="col">
           <span class="lang">
-            <a href="">Рус/</a>
-            <a href="">Укр/</a>
-            <a href="">Eng</a>
+            <a routerLink="/ru" (click)="switchRu()">Рус/</a>
+            <a routerLink="/ua" (click)="switchUa()">Укр</a>
           </span>
           <span class="terms">
             <span>© 2021</span>
-            <a routerLink="/terms">Угода користувача</a>
+            <a [routerLink]="termsLink">{{ "Terms" | translate }}</a>
           </span>
         </div>
         <div class="socials">
@@ -299,39 +308,5 @@
       </div>
     </div>
     <div class="logo"><img src="/assets/img/singlelogo.svg" alt="" /></div>
-
-    <!-- <div class="col1">
-      <span class="email">katrukdesign@gmail.com</span>
-      <span class="lang">
-        <a href="">Рус/</a>
-        <a href="">Укр/</a>
-        <a href="">Eng</a>
-      </span>
-      <span class="terms">
-        <span>© 2021</span>
-        <a routerLink="/terms">Угода користувача</a>
-      </span>
-    </div>
-    <div class="col2">
-      <span class="phone">
-        <a href="tel:+380508494970">+380 50 849-49-70</a>
-      </span>
-      <div class="socials">
-        <span
-          ><a href="https://telegram.me/cashismyhustle"
-            ><img src="/assets/img/telegram.svg" alt="" /></a
-        ></span>
-        <span
-          ><a href="https://www.instagram.com/katrukdesign/"
-            ><img src="/assets/img/insticon.svg" alt="" /></a
-        ></span>
-        <span>
-          <a href="viber://chat?number=380508494970">
-            <img src="/assets/img/viber.svg" alt="" />
-          </a>
-        </span>
-      </div>
-    </div>
-    <div class="logo"><img src="/assets/img/singlelogo.svg" alt="" /></div> -->
   </div>
 </footer>
