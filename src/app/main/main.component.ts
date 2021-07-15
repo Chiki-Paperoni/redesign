@@ -21,6 +21,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     name: '',
     phone: '',
   });
+  popupSuccess = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -37,6 +38,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   switchRu() {
+    console.log(this.translate.getParsedResult('ua', 'Sitetitle'));
     this.translate.use('ru');
     this.termsLink = '/terms';
   }
@@ -63,8 +65,8 @@ export class MainComponent implements OnInit, AfterViewInit {
           name: '',
           phone: '+380',
         });
+        this.popupSuccess = true;
       });
-      console.log('hello');
     }
   }
 }

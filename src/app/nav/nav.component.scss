@@ -38,6 +38,7 @@ nav {
   .sections {
     margin-left: auto;
     a {
+      cursor: pointer;
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 130%;
@@ -142,7 +143,7 @@ nav {
   }
   .success {
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;

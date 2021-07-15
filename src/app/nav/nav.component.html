@@ -4,10 +4,10 @@
       ><img class="imgLogo" src="/assets/img/logo.svg" alt="" srcset=""
     /></a>
     <div class="sections">
-      <a href="#what">{{ "DoWhat" | translate }}</a>
-      <a href="#how">{{ "DoHow" | translate }}</a>
-      <a href="#who">{{ "WhoAre" | translate }}</a>
-      <a href="#cases">{{ "Cases" | translate }}</a>
+      <a (click)="scroll('#what')">{{ "DoWhat" | translate }}</a>
+      <a (click)="scroll('#how')">{{ "DoHow" | translate }}</a>
+      <a (click)="scroll('#who')">{{ "WhoAre" | translate }}</a>
+      <!-- <a href="#cases">{{ "Cases" | translate }}</a> -->
     </div>
     <div class="button" (click)="showPopup()">{{ "Project" | translate }}</div>
     <img

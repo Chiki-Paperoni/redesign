@@ -32,10 +32,11 @@ export function app(): express.Express {
   // Example Express Rest API endpoints
   server.post('/api/post', (req, res) => {
     const data = JSON.stringify(req.body);
+    const path = encodeURIComponent(data);
     axios
       .post(
         'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001244564444&parse_mode=html&text=' +
-          data
+          path
       )
       .then(() => {
         res.status(200);
@@ -43,6 +44,7 @@ export function app(): express.Express {
       })
       .catch((error) => {
         console.error(error);
+        res.end();
       });
   });
   // Serve static files from /browser

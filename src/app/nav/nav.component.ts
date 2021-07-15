@@ -1,8 +1,10 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { PostOrderService } from '../post-order.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
@@ -10,6 +12,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
+  @Input() who: any;
+  @Input() what: any;
+  @Input() how: any;
   isPopupShown = false;
   popupsSuccess = false;
   mobileBgStyle = '';
@@ -22,7 +27,9 @@ export class NavComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private service: PostOrderService,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private router: Router,
+    private viewportScroller: ViewportScroller
   ) {}
 
   ngOnInit(): void {
@@ -30,6 +37,14 @@ export class NavComponent implements OnInit {
       name: '',
       phone: '+380',
     });
+  }
+  scroll(el: any) {
+    if (typeof el == 'string') {
+      console.log(el);
+      this.router.navigateByUrl(el);
+    } else {
+      el.scrollIntoView(true, { block: 'start', behavior: 'smooth' });
+    }
   }
   TogleMobileMenu(): void {
     if (this.mobileBgStyle === '') {
@@ -65,7 +80,9 @@ export class NavComponent implements OnInit {
           name: '',
           phone: '+380',
         });
+        this.isPopupShown = false;
         this.popupsSuccess = true;
+        document.body.style.overflow = '';
       });
     }
   }
