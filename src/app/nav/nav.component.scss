@@ -9,6 +9,11 @@
     .links {
       margin-top: 10rem;
       font-size: 6.4rem;
+      .row {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+      }
       .link {
         margin-bottom: 4rem;
       }
@@ -23,7 +28,10 @@
       margin-bottom: 4rem;
     }
     .langs {
+      display: flex;
+      align-items: center;
       font-size: 3.8rem;
+      color: #a3a3a3;
     }
   }
 }
@@ -135,13 +143,6 @@ nav {
         border-radius: 5rem;
         margin-top: 2rem;
         &:hover {
-          // &:active {
-          //   background: linear-gradient(
-          //     180deg,
-          //     rgba(68, 47, 82, 0.5) 0%,
-          //     #4cd4ff 100%
-          //   );
-          // }
           background: linear-gradient(
             180deg,
             rgba(158, 0, 255, 0.7) 0%,

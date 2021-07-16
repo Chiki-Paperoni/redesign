@@ -69,8 +69,12 @@
     (click)="TogleMobileMenu()"
   >
     <div class="links">
-      <div class="link">
+      <div class="link row">
         <a href="#what">{{ "DoWhat" | translate }}</a>
+        <div class="langs">
+          <a routerLink="/ru" (click)="switchRu()">Рус/</a>
+          <a routerLink="/ua" (click)="switchUa()">Укр</a>
+        </div>
       </div>
       <div class="link">
         <a href="#cases">{{ "Cases" | translate }}</a>
@@ -88,11 +92,6 @@
     <div class="bottom">
       <div class="phone"><a href="tel:+380508494970">+380 50 849-49-70</a></div>
       <div class="email">katrukdesign@gmail.com</div>
-
-      <div class="langs">
-        <a routerLink="/ru" (click)="switchRu()">Рус/</a>
-        <a routerLink="/ua" (click)="switchUa()">Укр</a>
-      </div>
     </div>
   </div>
 </div>
