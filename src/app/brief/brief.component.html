@@ -64,7 +64,7 @@
       <input type="text" [(ngModel)]="description" name="description" />
     </div>
     <div class="inputLine">
-      <p (click)="log()">Кто ваша целевая аудитория?</p>
+      <p>Кто ваша целевая аудитория?</p>
       <div class="tip">
         Кто ваши клиенты? Пол, возраст, предпочтения - любая информация будет
         полезна
@@ -105,19 +105,19 @@
     </div>
 
     <div class="inputLine">
-      <p (click)="log()">Что вы хотите видеть на сайте (контент,функционал)?</p>
+      <p>Что вы хотите видеть на сайте (контент,функционал)?</p>
       <div class="tip">Напишите какие блоки нужны на сайте</div>
       <input type="text" [(ngModel)]="features" name="features" />
     </div>
     <div class="inputLine">
-      <p (click)="log()">
+      <p>
         Какие есть преимущества у вашей компании/ чем вы отличаетесь от других?
       </p>
       <div class="tip"></div>
       <input type="text" [(ngModel)]="benefits" name="benefits" />
     </div>
     <div class="inputLine">
-      <p (click)="log()">
+      <p>
         Укажите конкретные цели и задачи сайта (приобрести товар, оставить
         заявку и тд.)
       </p>
@@ -170,26 +170,24 @@
       </div>
     </div>
     <div class="inputLine">
-      <p (click)="log()">Расскажите о ваших пожеланиях</p>
+      <p>Расскажите о ваших пожеланиях</p>
       <div class="tip"></div>
       <input type="text" [(ngModel)]="wishes" name="wishes" />
     </div>
     <div class="content">
-      <p (click)="log()">Наличие материалов для сайта</p>
+      <p>Наличие материалов для сайта</p>
       <div class="line">
         <button
           class="btn"
           [class.active]="content.photo"
-          (click)="content.photo = !content.photo"
-          [disabled]="content.no"
+          (click)="content.photo = !content.photo; content.no = false"
         >
           Есть фото
         </button>
         <button
           class="btn"
           [class.active]="content.text"
-          (click)="content.text = !content.text"
-          [disabled]="content.no"
+          (click)="content.text = !content.text; content.no = false"
         >
           Есть текст
         </button>
@@ -198,8 +196,7 @@
         <button
           class="btn"
           [class.active]="content.video"
-          (click)="content.video = !content.video"
-          [disabled]="content.no"
+          (click)="content.no = false; content.video = !content.video"
         >
           Есть видео
         </button>
@@ -208,7 +205,7 @@
           [class.active]="content.no"
           (click)="resetContent()"
         >
-          Нужно делать с нуля
+          Материалов нет
         </button>
       </div>
     </div>

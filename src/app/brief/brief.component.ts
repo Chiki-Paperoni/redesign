@@ -76,6 +76,9 @@ export class BriefComponent implements OnInit {
   toggleTerms(terms: string): void {
     this.terms === terms ? (this.terms = '') : (this.terms = terms);
   }
+  msg(): void {
+    console.log(this.content);
+  }
   resetContent(): void {
     this.content = {
       photo: false,
@@ -128,41 +131,41 @@ export class BriefComponent implements OnInit {
     const result = `Услуги: ${this.currentService} ${
       this.marketing ? ' + маркетинг' : ''
     }\n
-Для чего вам нужен сайт: ${this.reason}\n
-Опишите ваш проект: ${this.description}\n
-Кто ваша целевая аудитория: ${this.visitors}\n
+Для чего вам нужен сайт:\n${this.reason}\n
+Опишите ваш проект:\n${this.description}\n
+Кто ваша целевая аудитория:\n${this.visitors}\n
 Укажите ваших основных конкурентов:
-\t1.${this.competitors.c1}
-\t2.${this.competitors.c2}
-\t3.${this.competitors.c3}
-\t4.${this.competitors.c4}\n
-Что вы хотите видеть на сайте (контент,функционал): ${this.features}\n
-Какие есть преимущества у вашей компании/ чем вы отличаетесь от других: ${
+1.${this.competitors.c1}
+2.${this.competitors.c2}
+3.${this.competitors.c3}
+4.${this.competitors.c4}\n
+Что вы хотите видеть на сайте (контент,функционал):\n${this.features}\n
+Какие есть преимущества у вашей компании/ чем вы отличаетесь от других:\n${
       this.benefits
     }\n
-Укажите конкретные цели и задачи сайта (приобрести товар, оставить заявку и тд.): ${
+Укажите конкретные цели и задачи сайта (приобрести товар, оставить заявку и тд.):\n${
       this.purpose
     }\n
-Требуются ли создать разные языковые версии сайта (русский,английский): ${
+Требуются ли создать разные языковые версии сайта (русский,английский):\n${
       this.langs.ru ? 'Rus' : ''
     }, ${this.langs.eng ? 'Eng' : ''}\n
 Сайты, которые вам нравятся:
-\t1.${this.examples.c1}
-\t2.${this.examples.c2}
-\t3.${this.examples.c3}
-\t4.${this.examples.c4}\n
-Расскажите о ваших пожеланиях: ${this.wishes}\n
-Наличие материалов для сайта: ${this.content.photo ? 'есть фото, ' : ''}${
+1.${this.examples.c1}
+2.${this.examples.c2}
+3.${this.examples.c3}
+4.${this.examples.c4}\n
+Расскажите о ваших пожеланиях:\n${this.wishes}\n
+Наличие материалов для сайта:\n${this.content.photo ? 'есть фото, ' : ''}${
       this.content.text ? 'есть текст, ' : ''
     }${this.content.video ? 'есть видео, ' : ''}${
       this.content.no ? 'с нуля' : ''
     }\n
-Сроки проекта: ${this.terms}\n
+Сроки проекта:\n${this.terms}\n
 Контакты:
-\tИмя: ${this.contacts.c1}
-\tТелефон: ${this.contacts.c2}
-\tE-mail: ${this.contacts.c3}
-\tКомпания: ${this.contacts.c4}`;
+Имя: ${this.contacts.c1}
+Телефон: ${this.contacts.c2}
+E-mail: ${this.contacts.c3}
+Компания: ${this.contacts.c4}`;
     this.service.postBrief(result).subscribe((a) => {
       this.popupSuccess = true;
       this.resetAll();
