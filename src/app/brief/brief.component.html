@@ -1,0 +1,286 @@
+<app-nav></app-nav>
+<div class="container">
+  <form class="brief">
+    <app-success
+      *ngIf="popupSuccess"
+      (click)="this.popupSuccess = false"
+      (closeSucccess)="this.popupSuccess = false"
+    ></app-success>
+    <h1 class="title">Заполните Бриф</h1>
+    <p>Услуги</p>
+
+    <div class="services">
+      <div class="line">
+        <button
+          class="btn"
+          [class.active]="currentService === 'Лендинг'"
+          (click)="toggleService('Лендинг')"
+        >
+          Лендинг
+        </button>
+        <button
+          class="btn"
+          [class.active]="currentService === 'Бизнес-сайт'"
+          (click)="toggleService('Бизнес-сайт')"
+        >
+          Бизнес-сайт
+        </button>
+        <button
+          class="btn"
+          [class.active]="marketing"
+          [class.hidden]="currentService === ''"
+          (click)="marketing = !marketing"
+        >
+          Маркетинг
+        </button>
+      </div>
+      <div class="line">
+        <button
+          class="btn"
+          [class.active]="currentService === 'Интернет-магазин'"
+          (click)="toggleService('Интернет-магазин')"
+        >
+          Интернет-магазин
+        </button>
+        <button
+          class="btn"
+          [class.active]="currentService === 'Другое'"
+          (click)="toggleService('Другое')"
+        >
+          Другое
+        </button>
+      </div>
+    </div>
+    <div class="inputLine">
+      <p>Для чего вам нужен сайт ?</p>
+      <div class="tip"></div>
+      <input type="text" [(ngModel)]="reason" name="reason" />
+    </div>
+    <div class="inputLine">
+      <p>Опишите ваш проект</p>
+      <div class="tip">
+        Подробнее расскажите о направлении деятельности и сфере услуг
+      </div>
+      <input type="text" [(ngModel)]="description" name="description" />
+    </div>
+    <div class="inputLine">
+      <p (click)="log()">Кто ваша целевая аудитория?</p>
+      <div class="tip">
+        Кто ваши клиенты? Пол, возраст, предпочтения - любая информация будет
+        полезна
+      </div>
+      <input type="text" [(ngModel)]="visitors" name="visitors" />
+    </div>
+    <div class="inputList">
+      <p>Укажите ваших основных конкурентов</p>
+      <div class="tip">Тут должна быть ссылка на сайт</div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="1."
+          [(ngModel)]="competitors.c1"
+          name="c1"
+        />
+        <input
+          type="text"
+          placeholder="2."
+          [(ngModel)]="competitors.c2"
+          name="c2"
+        />
+      </div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="3."
+          [(ngModel)]="competitors.c3"
+          name="c3"
+        />
+        <input
+          type="text"
+          placeholder="4."
+          [(ngModel)]="competitors.c4"
+          name="c4"
+        />
+      </div>
+    </div>
+
+    <div class="inputLine">
+      <p (click)="log()">Что вы хотите видеть на сайте (контент,функционал)?</p>
+      <div class="tip">Напишите какие блоки нужны на сайте</div>
+      <input type="text" [(ngModel)]="features" name="features" />
+    </div>
+    <div class="inputLine">
+      <p (click)="log()">
+        Какие есть преимущества у вашей компании/ чем вы отличаетесь от других?
+      </p>
+      <div class="tip"></div>
+      <input type="text" [(ngModel)]="benefits" name="benefits" />
+    </div>
+    <div class="inputLine">
+      <p (click)="log()">
+        Укажите конкретные цели и задачи сайта (приобрести товар, оставить
+        заявку и тд.)
+      </p>
+      <div class="tip"></div>
+      <input type="text" [(ngModel)]="purpose" name="purpose" />
+    </div>
+    <div class="langs">
+      <p>
+        Требуются ли создать разные языковые версии сайта (русский,английский)?
+      </p>
+      <label class="row">
+        <input type="checkbox" name="ru" [(ngModel)]="langs.ru" /><span></span
+        >Русский
+      </label>
+      <label class="row">
+        <input type="checkbox" name="en" [(ngModel)]="langs.eng" /><span></span
+        >English
+      </label>
+    </div>
+    <div class="inputList">
+      <p>Сайты, которые вам нравятся</p>
+      <div class="tip"></div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="1."
+          [(ngModel)]="examples.c1"
+          name="c1"
+        />
+        <input
+          type="text"
+          placeholder="2."
+          [(ngModel)]="examples.c2"
+          name="c2"
+        />
+      </div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="3."
+          [(ngModel)]="examples.c3"
+          name="c3"
+        />
+        <input
+          type="text"
+          placeholder="4."
+          [(ngModel)]="examples.c4"
+          name="c4"
+        />
+      </div>
+    </div>
+    <div class="inputLine">
+      <p (click)="log()">Расскажите о ваших пожеланиях</p>
+      <div class="tip"></div>
+      <input type="text" [(ngModel)]="wishes" name="wishes" />
+    </div>
+    <div class="content">
+      <p (click)="log()">Наличие материалов для сайта</p>
+      <div class="line">
+        <button
+          class="btn"
+          [class.active]="content.photo"
+          (click)="content.photo = !content.photo"
+          [disabled]="content.no"
+        >
+          Есть фото
+        </button>
+        <button
+          class="btn"
+          [class.active]="content.text"
+          (click)="content.text = !content.text"
+          [disabled]="content.no"
+        >
+          Есть текст
+        </button>
+      </div>
+      <div class="line">
+        <button
+          class="btn"
+          [class.active]="content.video"
+          (click)="content.video = !content.video"
+          [disabled]="content.no"
+        >
+          Есть видео
+        </button>
+        <button
+          class="btn"
+          [class.active]="content.no"
+          (click)="resetContent()"
+        >
+          Нужно делать с нуля
+        </button>
+      </div>
+    </div>
+    <div class="terms">
+      <p>Сроки проекта</p>
+      <label class="row">
+        <input
+          type="checkbox"
+          name="urgent"
+          (click)="toggleTerms('на вчера')"
+          [checked]="terms === 'на вчера'"
+        /><span></span>Нужен на вчера
+      </label>
+      <label class="row">
+        <input
+          type="checkbox"
+          name="month"
+          (click)="toggleTerms('месяц')"
+          [checked]="terms === 'месяц'"
+        /><span></span>Месяц
+      </label>
+      <label class="row">
+        <input
+          type="checkbox"
+          name=""
+          (click)="toggleTerms('1.5-2 месяца')"
+          [checked]="terms === '1.5-2 месяца'"
+        /><span></span>1,5-2 месяца
+      </label>
+      <label class="row">
+        <input
+          type="checkbox"
+          name="more"
+          (click)="toggleTerms('больше двух месяцев')"
+          [checked]="terms === 'больше двух месяцев'"
+        /><span></span>больше двух месяцев
+      </label>
+    </div>
+    <div class="inputList">
+      <p>Контакты</p>
+      <div class="tip"></div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="Имя"
+          [(ngModel)]="contacts.c1"
+          name="c1"
+        />
+        <input
+          type="text"
+          placeholder="Телефон"
+          [(ngModel)]="contacts.c2"
+          name="c2"
+        />
+      </div>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="E-mail"
+          [(ngModel)]="contacts.c3"
+          name="c3"
+        />
+        <input
+          type="text"
+          placeholder="Компания"
+          [(ngModel)]="contacts.c4"
+          name="c4"
+        />
+      </div>
+    </div>
+    <div class="send">
+      <button class="btn" (click)="log()">ОТПРАВИТЬ</button>
+    </div>
+  </form>
+</div>

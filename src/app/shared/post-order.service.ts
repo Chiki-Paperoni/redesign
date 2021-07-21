@@ -25,4 +25,12 @@ export class PostOrderService {
       httpOptions
     );
   }
+  postBrief(brief: string): Observable<Object> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'text/plain',
+      }),
+    };
+    return this.http.post<Object>('api/briefs', brief, httpOptions);
+  }
 }

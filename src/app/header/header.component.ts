@@ -6,10 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() who: any;
-  @Input() what: any;
-  @Input() how: any;
-
   constructor() {}
 
   ngOnInit(): void {}

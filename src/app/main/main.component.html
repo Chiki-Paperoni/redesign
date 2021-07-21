@@ -1,4 +1,4 @@
-<app-header [who]="who" [what]="what" [how]="how"></app-header>
+<app-header></app-header>
 <div class="container">
   <section id="what" #what>
     <h2>
@@ -241,14 +241,11 @@
   </div>
 </div>
 <div id="form">
-  <div class="success" *ngIf="popupSuccess" (click)="this.popupSuccess = false">
-    <div class="message" appClickPropagationStop>
-      <span class="text"> {{ "success.text" | translate }}</span>
-      <button (click)="this.popupSuccess = false">
-        {{ "success.send" | translate }}
-      </button>
-    </div>
-  </div>
+  <app-success
+    *ngIf="popupSuccess"
+    (click)="this.popupSuccess = false"
+    (closeSucccess)="this.popupSuccess = false"
+  ></app-success>
   <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" autocomplete="off">
     <h3>{{ "Popup.title" | translate }}</h3>
     <label for="name">{{ "Popup.name.text" | translate }}</label>

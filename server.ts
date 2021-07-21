@@ -30,6 +30,30 @@ export function app(): express.Express {
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
+  server.post('/api/briefs', (req, res) => {
+    let body = '';
+    req.on('data', (data) => {
+      body += data;
+    });
+    req.on('end', () => {
+      axios
+        .post(
+          'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001563698953&parse_mode=html&text=' +
+            encodeURIComponent(body)
+        )
+        .then(() => {
+          res.status(200);
+          res.end();
+        })
+        .catch((error) => {
+          console.error(
+            'An error occured while sendin data to telegram bot:',
+            error
+          );
+          res.end();
+        });
+    });
+  });
   server.post('/api/post', (req, res) => {
     const data = JSON.stringify(req.body);
     const path = encodeURIComponent(data);
@@ -43,7 +67,10 @@ export function app(): express.Express {
         res.end();
       })
       .catch((error) => {
-        console.error(error);
+        console.error(
+          'An error occured while sendin data to telegram bot:',
+          error
+        );
         res.end();
       });
   });

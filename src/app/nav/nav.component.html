@@ -4,9 +4,15 @@
       ><img class="imgLogo" src="/assets/img/logo.svg" alt="" srcset=""
     /></a>
     <div class="sections">
-      <a (click)="scroll('#what')">{{ "DoWhat" | translate }}</a>
-      <a (click)="scroll('#how')">{{ "DoHow" | translate }}</a>
-      <a (click)="scroll('#who')">{{ "WhoAre" | translate }}</a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="what">{{
+        "DoWhat" | translate
+      }}</a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="how">{{
+        "DoHow" | translate
+      }}</a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="who">{{
+        "WhoAre" | translate
+      }}</a>
       <!-- <a href="#cases">{{ "Cases" | translate }}</a> -->
     </div>
     <div class="button" (click)="showPopup()">{{ "Project" | translate }}</div>
@@ -50,18 +56,12 @@
         </button>
       </form>
     </div>
-    <div
-      class="success"
-      *ngIf="popupsSuccess"
-      (click)="this.popupsSuccess = false"
-    >
-      <div class="message" appClickPropagationStop>
-        <span class="text"> {{ "success.text" | translate }}</span>
-        <button (click)="this.popupsSuccess = false">
-          {{ "success.send" | translate }}
-        </button>
-      </div>
-    </div>
+
+    <app-success
+      *ngIf="popupSuccess"
+      (click)="this.popupSuccess = false"
+      (closeSucccess)="this.popupSuccess = false"
+    ></app-success>
   </nav>
   <div
     class="mobileMenu container"

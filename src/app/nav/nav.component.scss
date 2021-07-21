@@ -1,6 +1,5 @@
 .background {
   min-height: 0;
-  // transition: 0.4s;
   .mobileMenu {
     width: 100%;
     height: 89vh;
@@ -133,7 +132,6 @@ nav {
         font-size: 1.3rem;
         margin-bottom: 16px;
       }
-
       button {
         transition: 0.4s;
         background: white;
@@ -156,7 +154,6 @@ nav {
     display: none;
   }
 }
-
 @media screen and(max-width:856px) {
   nav {
     justify-content: space-between;
@@ -197,46 +194,5 @@ nav {
     .imgMenu {
       display: block;
     }
-    .success {
-      .message {
-        width: 80.5rem;
-        padding: 6rem 3.5rem;
-        .text {
-          font-size: 4rem;
-        }
-        button {
-          font-size: 3.8rem;
-          padding: 2.2rem 6rem;
-        }
-      }
-    }
-  }
-}
-@keyframes granimate {
-  0% {
-    background-position: 10% 0%;
-  }
-  50% {
-    background-position: 91% 100%;
-  }
-  100% {
-    background-position: 10% 0%;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
   }
 }

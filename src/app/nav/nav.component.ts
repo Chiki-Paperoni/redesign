@@ -1,7 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { PostOrderService } from '../post-order.service';
+import { PostOrderService } from '../shared/post-order.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
@@ -12,11 +12,8 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  @Input() who: any;
-  @Input() what: any;
-  @Input() how: any;
   isPopupShown = false;
-  popupsSuccess = false;
+  popupSuccess = false;
   mobileBgStyle = '';
   mobileMenuStyle = '';
 
@@ -40,7 +37,6 @@ export class NavComponent implements OnInit {
   }
   scroll(el: any) {
     if (typeof el == 'string') {
-      console.log(el);
       this.router.navigateByUrl(el);
     } else {
       el.scrollIntoView(true, { block: 'start', behavior: 'smooth' });
@@ -81,7 +77,7 @@ export class NavComponent implements OnInit {
           phone: '+380',
         });
         this.isPopupShown = false;
-        this.popupsSuccess = true;
+        this.popupSuccess = true;
         document.body.style.overflow = '';
       });
     }

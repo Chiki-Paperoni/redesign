@@ -1,0 +1,155 @@
+.brief {
+  color: white;
+  padding-left: 7rem;
+  padding-top: 12rem;
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 6rem;
+  }
+  p {
+    font-size: 2.5rem;
+    margin-bottom: 3.2rem;
+  }
+  input[type="text"] {
+    border-bottom: 0.16rem solid #ffffff;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .tip {
+    font-size: 1.25rem;
+    margin-bottom: 3.5rem;
+    color: #a3a3a3;
+  }
+  .content {
+    margin-bottom: 4.6rem;
+  }
+  .line {
+    margin-bottom: 1.4rem;
+  }
+  .services {
+    margin-bottom: 8rem;
+  }
+  .btn {
+    color: white;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    padding: 1.5rem 2.5rem;
+    background: none;
+    border-radius: 2.5rem;
+    border: 0.24rem solid white;
+    margin-right: 1rem;
+  }
+  .active {
+    background: linear-gradient(
+      180deg,
+      rgba(158, 0, 255, 0.7) 0%,
+      #4cd4ff 100%
+    );
+  }
+  .inputLine {
+    margin-bottom: 4.6rem;
+    p {
+      margin-bottom: 0.6rem;
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .inputList {
+    .row {
+      margin-bottom: 4.6rem;
+    }
+    p {
+      margin-bottom: 0.6rem;
+    }
+    input {
+      &:focus::placeholder {
+        color: transparent;
+      }
+      width: 36%;
+      margin-right: 3.2rem;
+    }
+  }
+  .langs,
+  .terms {
+    margin-bottom: 4.6rem;
+    .row {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    input[type="checkbox"] {
+      opacity: 0;
+    }
+    input[type="checkbox"]:checked + span {
+      background: white;
+    }
+    span {
+      margin-right: 1.2rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 0.16rem solid #fff;
+      border-radius: 50%;
+    }
+  }
+  .send {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+    margin-top: 7rem;
+    .btn {
+      &:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(158, 0, 255, 0.7) 0%,
+          #4cd4ff 100%
+        );
+      }
+      font-size: 2.5rem;
+      padding: 2.2rem 12rem;
+      border-radius: 6rem;
+    }
+  }
+}
+@media screen and(max-width:856px) {
+  .brief {
+    padding-left: 0;
+    h1 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 4.2rem;
+    }
+    input[type="text"] {
+      font-size: 3.5rem;
+    }
+    .tip {
+      font-size: 2.6rem;
+    }
+    .btn {
+      font-size: 3.2rem;
+      padding: 1.8rem 2.9rem;
+      border-radius: 3.5rem;
+    }
+    .langs,
+    .terms {
+      .row {
+        font-size: 3.25rem;
+      }
+      span {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
+    }
+    .send {
+      .btn {
+        font-size: 4.5rem;
+        padding: 3.2rem 13rem;
+      }
+    }
+  }
+}

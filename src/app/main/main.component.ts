@@ -3,12 +3,13 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import * as AOS from 'aos';
 import { Inject } from '@angular/core';
-import { PostOrderService } from '../post-order.service';
+
 import { FormBuilder } from '@angular/forms';
+import { PostOrderService } from '../shared/post-order.service';
 
 @Component({
   selector: 'app-main',
@@ -25,10 +26,12 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
+
     private formBuilder: FormBuilder,
     private service: PostOrderService,
     public translate: TranslateService,
-    router: Router
+    public router: Router,
+    private activeRoute: ActivatedRoute
   ) {
     if (router.url.includes('/ua')) {
       this.switchUa();
@@ -38,7 +41,6 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   switchRu() {
-    console.log(this.translate.getParsedResult('ua', 'Sitetitle'));
     this.translate.use('ru');
     this.termsLink = '/terms';
   }
@@ -54,8 +56,14 @@ export class MainComponent implements OnInit, AfterViewInit {
     });
   }
   ngAfterViewInit() {
+    //Do this only in browser
     if (isPlatformBrowser(this.platformId)) {
+      //ENABLE AOS ANIMATIONS
       AOS.init();
+      //SCROOL TO FRAGMENT
+      this.activeRoute.fragment.subscribe((fragment: string) => {
+        this.scrollToAnchor(fragment);
+      });
     }
   }
   onSubmit(): void {
@@ -67,6 +75,20 @@ export class MainComponent implements OnInit, AfterViewInit {
         });
         this.popupSuccess = true;
       });
+    }
+  }
+
+  scrollToAnchor(location: string, wait = 0): void {
+    //YOU CANT USE THIS LINE WITH SSR(NO document on server) User platformId, like in sample above
+    const element = document.querySelector('#' + location);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest',
+        });
+      }, wait);
     }
   }
 }
