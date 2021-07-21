@@ -2,6 +2,9 @@
   color: white;
   padding-left: 7rem;
   padding-top: 12rem;
+  .hide {
+    display: none;
+  }
   h1 {
     font-size: 4rem;
     margin-bottom: 6rem;
@@ -104,6 +107,7 @@
     margin-top: 7rem;
     .btn {
       &:hover {
+        border-color: #252525;
         background: linear-gradient(
           180deg,
           rgba(158, 0, 255, 0.7) 0%,
