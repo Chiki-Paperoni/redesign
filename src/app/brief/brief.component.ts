@@ -27,15 +27,16 @@ export class BriefComponent implements OnInit {
   popupSuccess = false;
 
   currentService = '';
+  another = '';
   marketing = false;
   reason = '';
   description = '';
   visitors = '';
   competitors: Competitors = {
-    c1: '',
-    c2: '',
-    c3: '',
-    c4: '',
+    c1: '1.',
+    c2: '2.',
+    c3: '3.',
+    c4: '4.',
   };
   features = '';
   benefits = '';
@@ -45,10 +46,10 @@ export class BriefComponent implements OnInit {
     ru: false,
   };
   examples: Competitors = {
-    c1: '',
-    c2: '',
-    c3: '',
-    c4: '',
+    c1: '1.',
+    c2: '2.',
+    c3: '3.',
+    c4: '4.',
   };
   wishes = '';
   content: content = {
@@ -68,6 +69,7 @@ export class BriefComponent implements OnInit {
   constructor(private service: PostOrderService) {}
 
   ngOnInit(): void {}
+
   toggleService(service: string): void {
     this.currentService === service
       ? (this.currentService = '')
@@ -75,9 +77,6 @@ export class BriefComponent implements OnInit {
   }
   toggleTerms(terms: string): void {
     this.terms === terms ? (this.terms = '') : (this.terms = terms);
-  }
-  msg(): void {
-    console.log(this.content);
   }
   resetContent(): void {
     this.content = {
@@ -88,16 +87,17 @@ export class BriefComponent implements OnInit {
     };
   }
   resetAll(): void {
+    this.another = '';
     this.currentService = '';
     this.marketing = false;
     this.reason = '';
     this.description = '';
     this.visitors = '';
     this.competitors = {
-      c1: '',
-      c2: '',
-      c3: '',
-      c4: '',
+      c1: '1.',
+      c2: '2.',
+      c3: '3.',
+      c4: '4.',
     };
     this.features = '';
     this.benefits = '';
@@ -107,10 +107,10 @@ export class BriefComponent implements OnInit {
       ru: false,
     };
     this.examples = {
-      c1: '',
-      c2: '',
-      c3: '',
-      c4: '',
+      c1: '1.',
+      c2: '2.',
+      c3: '3.',
+      c4: '4.',
     };
     this.wishes = '';
     this.content = {
@@ -166,6 +166,7 @@ export class BriefComponent implements OnInit {
 Телефон: ${this.contacts.c2}
 E-mail: ${this.contacts.c3}
 Компания: ${this.contacts.c4}`;
+    console.log(this);
     this.service.postBrief(result).subscribe((a) => {
       this.popupSuccess = true;
       this.resetAll();

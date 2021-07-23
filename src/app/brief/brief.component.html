@@ -51,11 +51,17 @@
         </button>
       </div>
     </div>
+    <div class="inputLine" [class.hide]="currentService !== 'Другое'">
+      <p>Опишите, что вы хотите</p>
+      <div class="tip"></div>
+      <input type="text" [(ngModel)]="another" name="another" />
+    </div>
     <div class="inputLine">
       <p>Для чего вам нужен сайт ?</p>
       <div class="tip"></div>
       <input type="text" [(ngModel)]="reason" name="reason" />
     </div>
+
     <div class="inputLine">
       <p>Опишите ваш проект</p>
       <div class="tip">
@@ -78,13 +84,15 @@
         <input
           type="text"
           placeholder="1."
-          [(ngModel)]="competitors.c1"
+          [value]="competitors.c1"
+          (input)="competitors.c1 = $event.target.value"
           name="c1"
         />
         <input
           type="text"
           placeholder="2."
-          [(ngModel)]="competitors.c2"
+          [value]="competitors.c2"
+          (input)="competitors.c2 = $event.target.value"
           name="c2"
         />
       </div>
@@ -92,13 +100,15 @@
         <input
           type="text"
           placeholder="3."
-          [(ngModel)]="competitors.c3"
+          [value]="competitors.c3"
+          (input)="competitors.c3 = $event.target.value"
           name="c3"
         />
         <input
           type="text"
           placeholder="4."
-          [(ngModel)]="competitors.c4"
+          [value]="competitors.c4"
+          (input)="competitors.c4 = $event.target.value"
           name="c4"
         />
       </div>
@@ -126,7 +136,8 @@
     </div>
     <div class="langs">
       <p>
-        Требуются ли создать разные языковые версии сайта (русский,английский)?
+        Требуются ли создать дополнительные языковые версии сайта
+        (русский,английский)?
       </p>
       <label class="row">
         <input type="checkbox" name="ru" [(ngModel)]="langs.ru" /><span></span
@@ -144,13 +155,15 @@
         <input
           type="text"
           placeholder="1."
-          [(ngModel)]="examples.c1"
+          [value]="examples.c1"
+          (input)="examples.c1 = $event.target.value"
           name="c1"
         />
         <input
           type="text"
           placeholder="2."
-          [(ngModel)]="examples.c2"
+          [value]="examples.c2"
+          (input)="examples.c2 = $event.target.value"
           name="c2"
         />
       </div>
@@ -158,13 +171,15 @@
         <input
           type="text"
           placeholder="3."
-          [(ngModel)]="examples.c3"
+          [value]="examples.c3"
+          (input)="examples.c3 = $event.target.value"
           name="c3"
         />
         <input
           type="text"
           placeholder="4."
-          [(ngModel)]="examples.c4"
+          [value]="examples.c4"
+          (input)="examples.c4 = $event.target.value"
           name="c4"
         />
       </div>
