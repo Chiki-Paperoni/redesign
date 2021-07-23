@@ -28,8 +28,9 @@
         <button
           class="btn"
           [class.active]="marketing"
-          [class.hide]="currentService === ''"
+          [class.hide]="currentService === '' || currentService === 'Другое'"
           (click)="marketing = !marketing"
+          [disabled]="currentService === 'Другое'"
         >
           Маркетинг
         </button>
@@ -45,7 +46,7 @@
         <button
           class="btn"
           [class.active]="currentService === 'Другое'"
-          (click)="toggleService('Другое')"
+          (click)="toggleService('Другое'); marketing = false"
         >
           Другое
         </button>
@@ -136,7 +137,7 @@
     </div>
     <div class="langs">
       <p>
-        Требуются ли создать дополнительные языковые версии сайта
+        Требуется ли создать дополнительные языковые версии сайта
         (русский,английский)?
       </p>
       <label class="row">

@@ -33,10 +33,10 @@ export class BriefComponent implements OnInit {
   description = '';
   visitors = '';
   competitors: Competitors = {
-    c1: '1.',
-    c2: '2.',
-    c3: '3.',
-    c4: '4.',
+    c1: '1.  ',
+    c2: '2.  ',
+    c3: '3.  ',
+    c4: '4.  ',
   };
   features = '';
   benefits = '';
@@ -46,10 +46,10 @@ export class BriefComponent implements OnInit {
     ru: false,
   };
   examples: Competitors = {
-    c1: '1.',
-    c2: '2.',
-    c3: '3.',
-    c4: '4.',
+    c1: '1.  ',
+    c2: '2.  ',
+    c3: '3.  ',
+    c4: '4.  ',
   };
   wishes = '';
   content: content = {
@@ -135,10 +135,10 @@ export class BriefComponent implements OnInit {
 Опишите ваш проект:\n${this.description}\n
 Кто ваша целевая аудитория:\n${this.visitors}\n
 Укажите ваших основных конкурентов:
-1.${this.competitors.c1}
-2.${this.competitors.c2}
-3.${this.competitors.c3}
-4.${this.competitors.c4}\n
+${this.competitors.c1}
+${this.competitors.c2}
+${this.competitors.c3}
+${this.competitors.c4}\n
 Что вы хотите видеть на сайте (контент,функционал):\n${this.features}\n
 Какие есть преимущества у вашей компании/ чем вы отличаетесь от других:\n${
       this.benefits
@@ -150,10 +150,10 @@ export class BriefComponent implements OnInit {
       this.langs.ru ? 'Rus' : ''
     }, ${this.langs.eng ? 'Eng' : ''}\n
 Сайты, которые вам нравятся:
-1.${this.examples.c1}
-2.${this.examples.c2}
-3.${this.examples.c3}
-4.${this.examples.c4}\n
+${this.examples.c1}
+${this.examples.c2}
+${this.examples.c3}
+${this.examples.c4}\n
 Расскажите о ваших пожеланиях:\n${this.wishes}\n
 Наличие материалов для сайта:\n${this.content.photo ? 'есть фото, ' : ''}${
       this.content.text ? 'есть текст, ' : ''
@@ -166,7 +166,6 @@ export class BriefComponent implements OnInit {
 Телефон: ${this.contacts.c2}
 E-mail: ${this.contacts.c3}
 Компания: ${this.contacts.c4}`;
-    console.log(this);
     this.service.postBrief(result).subscribe((a) => {
       this.popupSuccess = true;
       this.resetAll();
