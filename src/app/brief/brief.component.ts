@@ -33,10 +33,10 @@ export class BriefComponent implements OnInit {
   description = '';
   visitors = '';
   competitors: Competitors = {
-    c1: '1.  ',
-    c2: '2.  ',
-    c3: '3.  ',
-    c4: '4.  ',
+    c1: '',
+    c2: '',
+    c3: '',
+    c4: '',
   };
   features = '';
   benefits = '';
@@ -46,10 +46,10 @@ export class BriefComponent implements OnInit {
     ru: false,
   };
   examples: Competitors = {
-    c1: '1.  ',
-    c2: '2.  ',
-    c3: '3.  ',
-    c4: '4.  ',
+    c1: '',
+    c2: '',
+    c3: '',
+    c4: '',
   };
   wishes = '';
   content: content = {
@@ -94,10 +94,10 @@ export class BriefComponent implements OnInit {
     this.description = '';
     this.visitors = '';
     this.competitors = {
-      c1: '1.',
-      c2: '2.',
-      c3: '3.',
-      c4: '4.',
+      c1: '',
+      c2: '',
+      c3: '',
+      c4: '',
     };
     this.features = '';
     this.benefits = '';
@@ -107,10 +107,10 @@ export class BriefComponent implements OnInit {
       ru: false,
     };
     this.examples = {
-      c1: '1.',
-      c2: '2.',
-      c3: '3.',
-      c4: '4.',
+      c1: '',
+      c2: '',
+      c3: '',
+      c4: '',
     };
     this.wishes = '';
     this.content = {
