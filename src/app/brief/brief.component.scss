@@ -13,6 +13,11 @@
     font-size: 2.5rem;
     margin-bottom: 3.2rem;
   }
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
   input[type="text"],
   .pre {
     border-top: none;
@@ -24,6 +29,7 @@
     font-size: 1.2rem;
     padding: 0.8rem 0;
   }
+
   .tip {
     font-size: 1.25rem;
     margin-bottom: 3.5rem;
