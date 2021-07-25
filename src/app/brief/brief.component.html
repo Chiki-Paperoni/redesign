@@ -82,36 +82,44 @@
       <p>Укажите ваших основных конкурентов</p>
       <div class="tip">Тут должна быть ссылка на сайт</div>
       <div class="row">
-        <span class="pre">1.</span>
-        <input
-          type="text"
-          [value]="competitors.c1"
-          (input)="competitors.c1 = $event.target.value"
-          name="c1"
-        />
-        <span class="pre">2.</span>
-        <input
-          type="text"
-          [value]="competitors.c2"
-          (input)="competitors.c2 = $event.target.value"
-          name="c2"
-        />
+        <div class="border-btm">
+          <span class="pre">1.</span>
+          <input
+            type="text"
+            [value]="competitors.c1"
+            (input)="competitors.c1 = $event.target.value"
+            name="c1"
+          />
+        </div>
+        <div class="border-btm">
+          <span class="pre">2.</span>
+          <input
+            type="text"
+            [value]="competitors.c2"
+            (input)="competitors.c2 = $event.target.value"
+            name="c2"
+          />
+        </div>
       </div>
       <div class="row">
-        <span class="pre">3.</span>
-        <input
-          type="text"
-          [value]="competitors.c3"
-          (input)="competitors.c3 = $event.target.value"
-          name="c3"
-        />
-        <span class="pre">4.</span>
-        <input
-          type="text"
-          [value]="competitors.c4"
-          (input)="competitors.c4 = $event.target.value"
-          name="c4"
-        />
+        <div class="border-btm">
+          <span class="pre">3.</span>
+          <input
+            type="text"
+            [value]="competitors.c3"
+            (input)="competitors.c3 = $event.target.value"
+            name="c3"
+          />
+        </div>
+        <div class="border-btm">
+          <span class="pre">4.</span>
+          <input
+            type="text"
+            [value]="competitors.c4"
+            (input)="competitors.c4 = $event.target.value"
+            name="c4"
+          />
+        </div>
       </div>
     </div>
 
@@ -153,36 +161,44 @@
       <p>Сайты, которые вам нравятся</p>
       <div class="tip"></div>
       <div class="row">
-        <span class="pre">1.</span>
-        <input
-          type="text"
-          [value]="examples.c1"
-          (input)="examples.c1 = $event.target.value"
-          name="c1"
-        />
-        <span class="pre">2.</span>
-        <input
-          type="text"
-          [value]="examples.c2"
-          (input)="examples.c2 = $event.target.value"
-          name="c2"
-        />
+        <div class="border-btm">
+          <span class="pre">1.</span>
+          <input
+            type="text"
+            [value]="examples.c1"
+            (input)="examples.c1 = $event.target.value"
+            name="c1"
+          />
+        </div>
+        <div class="border-btm">
+          <span class="pre">2.</span>
+          <input
+            type="text"
+            [value]="examples.c2"
+            (input)="examples.c2 = $event.target.value"
+            name="c2"
+          />
+        </div>
       </div>
       <div class="row">
-        <span class="pre">3.</span>
-        <input
-          type="text"
-          [value]="examples.c3"
-          (input)="examples.c3 = $event.target.value"
-          name="c3"
-        />
-        <span class="pre">4.</span>
-        <input
-          type="text"
-          [value]="examples.c4"
-          (input)="examples.c4 = $event.target.value"
-          name="c4"
-        />
+        <div class="border-btm">
+          <span class="pre">3.</span>
+          <input
+            type="text"
+            [value]="examples.c3"
+            (input)="examples.c3 = $event.target.value"
+            name="c3"
+          />
+        </div>
+        <div class="border-btm">
+          <span class="pre">4.</span>
+          <input
+            type="text"
+            [value]="examples.c4"
+            (input)="examples.c4 = $event.target.value"
+            name="c4"
+          />
+        </div>
       </div>
     </div>
     <div class="inputLine">
@@ -264,32 +280,40 @@
       <p>Контакты</p>
       <div class="tip"></div>
       <div class="row">
-        <input
-          type="text"
-          placeholder="Имя"
-          [(ngModel)]="contacts.c1"
-          name="c1"
-        />
-        <input
-          type="text"
-          placeholder="Телефон"
-          [(ngModel)]="contacts.c2"
-          name="c2"
-        />
+        <div class="border-btm">
+          <input
+            type="text"
+            placeholder="Имя"
+            [(ngModel)]="contacts.c1"
+            name="c1"
+          />
+        </div>
+        <div class="border-btm">
+          <input
+            type="text"
+            placeholder="Телефон"
+            [(ngModel)]="contacts.c2"
+            name="c2"
+          />
+        </div>
       </div>
       <div class="row">
-        <input
-          type="text"
-          placeholder="E-mail"
-          [(ngModel)]="contacts.c3"
-          name="c3"
-        />
-        <input
-          type="text"
-          placeholder="Компания"
-          [(ngModel)]="contacts.c4"
-          name="c4"
-        />
+        <div class="border-btm">
+          <input
+            type="text"
+            placeholder="E-mail"
+            [(ngModel)]="contacts.c3"
+            name="c3"
+          />
+        </div>
+        <div class="border-btm">
+          <input
+            type="text"
+            placeholder="Компания"
+            [(ngModel)]="contacts.c4"
+            name="c4"
+          />
+        </div>
       </div>
     </div>
     <div class="send">

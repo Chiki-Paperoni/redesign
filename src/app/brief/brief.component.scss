@@ -18,16 +18,17 @@
     -moz-appearance: none;
     appearance: none;
   }
+  .border-btm {
+    border-bottom: 0.16rem solid #ffffff;
+  }
   input[type="text"],
   .pre {
-    border: transparent;
-    border-bottom: 0.16rem solid #ffffff;
-    background: none;
+    border: transparent !important;
     background-color: #252525 !important;
     border-radius: 0 !important;
     color: white !important;
-    font-size: 1.2rem !important;
-    padding: 0.8rem 0 !important;
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
   }
 
   .tip {
@@ -76,17 +77,23 @@
       padding: 0.8rem 0.8rem 0.8rem 0;
     }
     .row {
+      display: flex;
       margin-bottom: 4.6rem;
     }
     p {
       margin-bottom: 0.6rem;
     }
+    .border-btm {
+      display: flex;
+      align-items: flex-end;
+      margin-right: 2rem;
+      width: 50%;
+    }
     input {
       &:focus::placeholder {
         color: transparent;
       }
-      width: 36%;
-      margin-right: 3.2rem;
+      width: 100%;
     }
   }
   .langs,
