@@ -23,7 +23,6 @@
   }
   input[type="text"],
   .pre {
-    border: transparent !important;
     background-color: #252525 !important;
     border-radius: 0 !important;
     color: white !important;
@@ -69,6 +68,7 @@
       margin-bottom: 0.6rem;
     }
     input {
+      border-bottom: 0.16rem solid #ffffff;
       width: 100%;
     }
   }
@@ -90,6 +90,7 @@
       width: 50%;
     }
     input {
+      border: transparent !important;
       &:focus::placeholder {
         color: transparent;
       }
