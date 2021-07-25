@@ -8,6 +8,8 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import axios from 'axios';
+const TELEGRAM =
+  'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001563698953&parse_mode=html&text=';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -37,10 +39,7 @@ export function app(): express.Express {
     });
     req.on('end', () => {
       axios
-        .post(
-          'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001563698953&parse_mode=html&text=' +
-            encodeURIComponent(body)
-        )
+        .post(TELEGRAM + encodeURIComponent(body))
         .then(() => {
           res.status(200);
           res.end();
@@ -54,30 +53,10 @@ export function app(): express.Express {
         });
     });
   });
-  server.post('/api/post', (req, res) => {
-    const data = JSON.stringify(req.body);
-    const path = encodeURIComponent(data);
-    axios
-      .post(
-        'https://api.telegram.org/bot1730980288:AAGky2y9SAWak9-ygjfEKNnA5eroJQYIz_Q/sendMessage?chat_id=-1001244564444&parse_mode=html&text=' +
-          path
-      )
-      .then(() => {
-        res.status(200);
-        res.end();
-      })
-      .catch((error) => {
-        console.error(
-          'An error occured while sendin data to telegram bot:',
-          error
-        );
-        res.end();
-      });
-  });
+
   // Serve static files from /browser
   server.get(
     '*.*',
-
     express.static(distFolder, {
       maxAge: '1y',
     })

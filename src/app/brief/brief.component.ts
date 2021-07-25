@@ -166,7 +166,7 @@ ${this.examples.c4}\n
 Телефон: ${this.contacts.c2}
 E-mail: ${this.contacts.c3}
 Компания: ${this.contacts.c4}`;
-    this.service.postBrief(result).subscribe((a) => {
+    this.service.post(result).subscribe((a) => {
       this.popupSuccess = true;
       this.resetAll();
     });

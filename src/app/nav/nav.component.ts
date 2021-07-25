@@ -71,7 +71,8 @@ export class NavComponent implements OnInit {
   }
   onSubmit(): void {
     if (this.orderForm.valid) {
-      this.service.postOrder(this.orderForm.value).subscribe((data) => {
+      const result = `Заказ\nИмя: ${this.orderForm.value.name}\nНомер: ${this.orderForm.value.phone}`;
+      this.service.post(result).subscribe((data) => {
         this.orderForm.setValue({
           name: '',
           phone: '+380',
