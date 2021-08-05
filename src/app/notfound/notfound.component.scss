@@ -1,31 +1,32 @@
 .notfound {
-  background: url(/assets/img/fourofour.png) no-repeat;
-
-  background-size: cover;
   color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   .error {
+    z-index: 1;
     font-size: max(22rem, 56px);
     margin-bottom: 4rem;
   }
   h2 {
+    z-index: 1;
     font-size: max(2.5rem, 28px);
     margin-bottom: 2.5rem;
   }
   h3 {
+    z-index: 1;
     font-size: max(1.3rem, 16px);
     font-weight: normal;
     margin-bottom: 4.5rem;
     text-align: center;
     line-height: 130%;
-    // width: 27%;
     max-width: 500px;
   }
   .back {
+    z-index: 1;
     color: white;
     background: none;
     font-size: max(1.8rem, 18px);
@@ -33,5 +34,17 @@
     box-sizing: border-box;
     border-radius: max(2.5rem, 24px);
     padding: max(1.5rem, 12px) max(6rem, 32px);
+  }
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
