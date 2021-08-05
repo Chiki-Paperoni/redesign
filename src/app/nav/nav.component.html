@@ -10,6 +10,9 @@
       <a routerLink="{{ 'basicHref' | translate }}" fragment="how">{{
         "DoHow" | translate
       }}</a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="cases">{{
+        "Cases" | translate
+      }}</a>
       <a routerLink="{{ 'basicHref' | translate }}" fragment="who">{{
         "WhoAre" | translate
       }}</a>
@@ -72,12 +75,17 @@
       <div class="link row">
         <a href="#what">{{ "DoWhat" | translate }}</a>
         <div class="langs">
-          <a routerLink="/ru" (click)="switchRu()">Рус/</a>
-          <a routerLink="/ua" (click)="switchUa()">Укр</a>
+          <!-- <a routerLink="/ru" (click)="switchRu()">Рус/</a>
+          <a routerLink="/ua" (click)="switchUa()">Укр</a> -->
+          <a href="/ru">Рус/</a>
+          <a href="/ua">Укр</a>
         </div>
       </div>
       <div class="link">
         <a href="#how">{{ "DoHow" | translate }}</a>
+      </div>
+      <div class="link">
+        <a href="#cases">{{ "Cases" | translate }}</a>
       </div>
       <div class="link">
         <a href="#who">{{ "WhoAre" | translate }}</a>

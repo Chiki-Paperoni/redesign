@@ -18,7 +18,9 @@ pre {
 }
 .container {
   margin: 0 auto;
-  max-width: 78rem;
+  // max-width: 78rem;
+
+  max-width: 83rem;
 }
 a {
   text-decoration: none;
@@ -145,6 +147,30 @@ section {
       display: flex;
       img {
         height: 12rem;
+      }
+    }
+  }
+}
+#cases {
+  h2 {
+    margin-bottom: 6rem;
+  }
+  .cases {
+    display: grid;
+    grid-column-gap: max(2.5rem, 18px);
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(max(280px, 33rem), 1fr));
+    .case {
+      margin-bottom: 40px;
+      .title {
+        font-size: max(1.6rem, 16px);
+        margin-bottom: max(1.6rem, 12px);
+      }
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
       }
     }
   }
