@@ -17,6 +17,7 @@ import { PostOrderService } from '../shared/post-order.service';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit, AfterViewInit {
+  schoolProgress = false;
   termsLink = '/terms';
   orderForm = this.formBuilder.group({
     name: '',
