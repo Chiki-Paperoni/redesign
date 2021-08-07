@@ -206,15 +206,18 @@
     <div class="cases">
       <div class="case">
         <p class="title">Промо-сайт «Банки»</p>
-        <a href="https://promowebsite.herokuapp.com/"
-          ><img src="/assets/img/case1.png" alt=""
-        /></a>
+        <a href="https://promowebsite.herokuapp.com/">
+          <img src="/assets/img/case1.png" alt="" />
+          <div class="block">
+            <div class="btn">Посмотреть</div>
+          </div>
+        </a>
       </div>
       <div class="case">
         <p class="title">Сайт для школы</p>
-        <a (click)="schoolProgress = !schoolProgress">
+        <a>
           <img src="/assets/img/case2.png" alt="" />
-          <div class="block" *ngIf="schoolProgress">
+          <div class="block">
             <div class="btn">Еще разрабатываем</div>
           </div>
         </a>
