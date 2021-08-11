@@ -63,40 +63,43 @@ section {
       }
     }
   }
-  .card {
-    display: flex;
-    flex-direction: column;
+  a {
     flex: 1 0 0;
-    padding: 3.2rem 2rem;
-    border: 4px solid #ffffff;
-    box-sizing: border-box;
-    border-radius: 2.6rem;
-    color: white;
-    h2 {
-      margin-bottom: 3.6rem;
-      font-size: 3.2rem;
-      line-height: 130%;
-    }
-    p {
-      font-size: 1.7rem;
-      margin-bottom: 3.4rem;
-      line-height: 150%;
-      font-weight: 500;
-    }
-    .info {
+    .card {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-      .terms {
-        font-weight: 500;
-        font-size: 1.8rem;
-        line-height: 150%;
+      flex-direction: column;
+
+      padding: 3.2rem 2rem;
+      border: 4px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 2.6rem;
+      color: white;
+      h2 {
+        margin-bottom: 3.6rem;
+        font-size: 3.2rem;
+        line-height: 130%;
       }
-      .price {
-        color: #91f355;
-        font-size: 2.5rem;
+      p {
+        font-size: 1.7rem;
+        margin-bottom: 3.4rem;
         line-height: 150%;
+        font-weight: 500;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        .terms {
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 150%;
+        }
+        .price {
+          color: #91f355;
+          font-size: 2.5rem;
+          line-height: 150%;
+        }
       }
     }
   }

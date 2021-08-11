@@ -8,73 +8,83 @@
       </pre>
     </h2>
     <div class="cards">
-      <div
-        class="card upleft"
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
+      <a routerLink="/landing">
+        <div
+          class="card upleft"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2>{{ "What.card1.h2" | translate }}</h2>
+          <p>
+            {{ "What.card1.p" | translate }}
+          </p>
+          <div class="info">
+            <span class="terms">{{ "What.card1.terms" | translate }}</span>
+            <span class="price">{{ "What.card1.price" | translate }}</span>
+          </div>
+        </div></a
       >
-        <h2>{{ "What.card1.h2" | translate }}</h2>
-        <p>
-          {{ "What.card1.p" | translate }}
-        </p>
-        <div class="info">
-          <span class="terms">{{ "What.card1.terms" | translate }}</span>
-          <span class="price">{{ "What.card1.price" | translate }}</span>
-        </div>
-      </div>
-      <div
-        class="card upright"
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
+
+      <a routerLink="/business">
+        <div
+          class="card upright"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2>{{ "What.card2.h2" | translate }}</h2>
+          <p>
+            {{ "What.card2.p" | translate }}
+          </p>
+          <div class="info">
+            <span class="terms">{{ "What.card2.terms" | translate }}</span>
+            <span class="price">{{ "What.card2.price" | translate }}</span>
+          </div>
+        </div></a
       >
-        <h2>{{ "What.card2.h2" | translate }}</h2>
-        <p>
-          {{ "What.card2.p" | translate }}
-        </p>
-        <div class="info">
-          <span class="terms">{{ "What.card2.terms" | translate }}</span>
-          <span class="price">{{ "What.card2.price" | translate }}</span>
-        </div>
-      </div>
     </div>
+
     <div class="cards">
-      <div
-        class="card upright"
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
-      >
-        <h2>{{ "What.card3.h2" | translate }}</h2>
-        <p>
-          {{ "What.card3.p" | translate }}
-        </p>
-        <div class="info">
-          <span class="terms">{{ "What.card3.terms" | translate }}</span>
-          <span class="price">{{ "What.card3.price" | translate }}</span>
+      <a routerLink="/store">
+        <div
+          class="card upright"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2>{{ "What.card3.h2" | translate }}</h2>
+          <p>
+            {{ "What.card3.p" | translate }}
+          </p>
+          <div class="info">
+            <span class="terms">{{ "What.card3.terms" | translate }}</span>
+            <span class="price">{{ "What.card3.price" | translate }}</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="card downleft"
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
+      </a>
+      <a routerLink="/marketing">
+        <div
+          class="card downleft"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2>{{ "What.card4.h2" | translate }}</h2>
+          <p>
+            {{ "What.card4.p" | translate }}
+          </p>
+          <div class="info">
+            <span class="terms">{{ "What.card4.terms" | translate }}</span>
+            <span class="price"
+              >$500
+              <span style="color: white">{{
+                "What.card4.price" | translate
+              }}</span></span
+            >
+          </div>
+        </div></a
       >
-        <h2>{{ "What.card4.h2" | translate }}</h2>
-        <p>
-          {{ "What.card4.p" | translate }}
-        </p>
-        <div class="info">
-          <span class="terms">{{ "What.card4.terms" | translate }}</span>
-          <span class="price"
-            >$500
-            <span style="color: white">{{
-              "What.card4.price" | translate
-            }}</span></span
-          >
-        </div>
-      </div>
     </div>
   </section>
 

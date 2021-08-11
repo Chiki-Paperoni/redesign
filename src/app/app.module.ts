@@ -19,6 +19,10 @@ import { translateBrowserLoaderFactory } from './translate/loaders/translate-bro
 import { ClickPropagationStopDirective } from './shared/click-propagation-stop.directive';
 import { DigitOnlyDirective } from './shared/digit-only.directive';
 import { SuccessComponent } from './success/success.component';
+import { MarketingComponent } from './cases/marketing/marketing.component';
+import { LandingComponent } from './cases/landing/landing.component';
+import { BusinessComponent } from './cases/business/business.component';
+import { StoreComponent } from './cases/store/store.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { SuccessComponent } from './success/success.component';
     TermsUaComponent,
     BriefComponent,
     SuccessComponent,
+    MarketingComponent,
+    LandingComponent,
+    BusinessComponent,
+    StoreComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
