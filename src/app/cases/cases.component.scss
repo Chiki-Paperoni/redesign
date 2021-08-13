@@ -1,13 +1,18 @@
 .case {
-  height: 100vh;
+  overflow-y: auto;
+  display: grid;
+  min-height: 100vh;
+
   .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 83rem;
   }
   .btn {
+    width: max-content;
+    display: inline-block;
     color: #252525;
-    font-size: max(1rem, 10px);
+    font-size: max(0.9rem, 14px);
     line-height: 130%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -15,19 +20,15 @@
     background: #ffffff;
     box-sizing: border-box;
     border-radius: 50px;
-    padding: max(0.9rem, 10px) max(2rem, 28px);
-  }
-  .center {
-    align-self: center;
-  }
-  .end {
-    align-self: flex-end;
+    padding: 16px max(2rem, 25px);
   }
   .col1 {
+    margin-top: max(6rem, 100px);
+    width: max(55%, 280px);
     p {
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: max(0.9rem, 12px);
       line-height: 21px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -35,16 +36,18 @@
     h1 {
       font-style: normal;
       font-weight: normal;
-      font-size: max(3.75rem, 36px);
+      font-size: max(3.75rem, 28px);
       line-height: max(4.5rem, 36px);
-      margin-top: max(4rem, 32px);
-      margin-bottom: max(3rem, 40px);
+      margin-top: max(4rem, 50px);
+      margin-bottom: max(2rem, 40px);
       span {
         color: #4cd4ff;
       }
     }
   }
-  .col2 {
+  .col3 {
+    align-self: flex-end;
+    width: max(50%, 300px);
     h2 {
       font-weight: normal;
       font-size: max(1.25rem, 16px);
@@ -56,10 +59,43 @@
     p {
       font-style: normal;
       font-weight: normal;
-      font-size: max(1.25rem, 16px);
+      font-size: max(1.25rem, 18px);
       line-height: 140%;
       color: #b8b8b8;
       width: 70%;
+    }
+  }
+  .back {
+    width: 82rem;
+    display: none;
+    margin-top: 100px;
+    margin-bottom: 36px;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      margin-left: 18px;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .case {
+    .col3 {
+      align-self: flex-start;
+      p {
+        display: none;
+      }
+    }
+    .col2 {
+      order: 3;
+    }
+    .back {
+      display: block;
     }
   }
 }
