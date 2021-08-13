@@ -26,6 +26,7 @@
     max-width: 500px;
   }
   .back {
+    animation: 20s infinite granimate;
     z-index: 1;
     color: white;
     background: none;
@@ -34,6 +35,19 @@
     box-sizing: border-box;
     border-radius: max(2.5rem, 24px);
     padding: max(1.5rem, 12px) max(6rem, 32px);
+    &:hover {
+      border-color: transparent;
+      background-image: linear-gradient(
+        90deg,
+        #b042e4,
+        #2d33e4,
+        #b042e4,
+        #36ecd6,
+        #9a23b8,
+        #56e6fa
+      );
+      background-size: 400% 400%;
+    }
   }
   .bg {
     position: absolute;
