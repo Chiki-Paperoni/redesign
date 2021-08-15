@@ -45,12 +45,25 @@ nav {
   }
   .sections {
     margin-left: auto;
+    display: flex;
     a {
+      height: 1.3rem;
+      overflow: hidden;
       cursor: pointer;
       font-weight: 500;
       font-size: max(1.2rem, 12px);
       line-height: 130%;
       margin-left: 2.4rem;
+      &:hover {
+        .scroller {
+          transform: translateY(-50%);
+        }
+      }
+      .scroller {
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
   .button {

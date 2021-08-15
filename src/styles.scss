@@ -169,14 +169,31 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(max(280px, 33rem), 1fr));
     .case {
       margin-bottom: 40px;
+      height: 45.2rem;
+      overflow: hidden;
+      &:hover {
+        a {
+          transform: scale(1.05);
+        }
+      }
       .title {
         font-size: max(1.6rem, 16px);
         margin-bottom: max(1.6rem, 12px);
       }
+      .bg1 {
+        background-image: url(/assets/img/case1.png);
+      }
+      .bg2 {
+        background-image: url(/assets/img/case2.png);
+      }
       a {
+        transition: 0.3s;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
         &:hover {
           .block {
-            display: flex;
+            opacity: 1;
           }
         }
         display: block;
@@ -186,24 +203,26 @@ section {
           width: 100%;
         }
         .block {
+          transition: 0.3s;
           position: absolute;
           top: 0;
           right: 0;
           bottom: 0;
           left: 0;
-          display: none;
+          opacity: 0;
+          display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: rgb(27 22 128);
           .btn {
-            font-size: max(1.25rem, 14px);
-            color: black;
-            background-color: white;
-            padding: max(1.4rem, 12px) max(4rem, 36px);
-            width: max-content;
-            border-radius: 2.5rem;
-            cursor: pointer;
+            font-size: max(1.6rem, 14px);
+            // color: black;
+            // background-color: white;
+            // padding: max(1.4rem, 12px) max(4rem, 36px);
+            // width: max-content;
+            // border-radius: 2.5rem;
+            // cursor: pointer;
           }
         }
       }
@@ -482,6 +501,15 @@ footer {
       button {
         font-size: 3.8rem;
         padding: 2.2rem 6rem;
+      }
+    }
+  }
+}
+@media screen and(max-width:704px) {
+  #cases {
+    .cases {
+      .case {
+        height: 90rem;
       }
     }
   }

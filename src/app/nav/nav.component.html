@@ -4,18 +4,46 @@
       ><img class="imgLogo" src="/assets/img/logo.svg" alt="" srcset=""
     /></a>
     <div class="sections">
-      <a routerLink="{{ 'basicHref' | translate }}" fragment="what">{{
-        "DoWhat" | translate
-      }}</a>
-      <a routerLink="{{ 'basicHref' | translate }}" fragment="how">{{
-        "DoHow" | translate
-      }}</a>
-      <a routerLink="{{ 'basicHref' | translate }}" fragment="cases">{{
-        "Cases" | translate
-      }}</a>
-      <a routerLink="{{ 'basicHref' | translate }}" fragment="who">{{
-        "WhoAre" | translate
-      }}</a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="what">
+        <div class="scroller">
+          <span>
+            {{ "DoWhat" | translate }}
+          </span>
+          <span>
+            {{ "DoWhat" | translate }}
+          </span>
+        </div>
+      </a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="how">
+        <div class="scroller">
+          <span>
+            {{ "DoHow" | translate }}
+          </span>
+          <span>
+            {{ "DoHow" | translate }}
+          </span>
+        </div>
+      </a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="cases">
+        <div class="scroller">
+          <span>
+            {{ "Cases" | translate }}
+          </span>
+          <span>
+            {{ "Cases" | translate }}
+          </span>
+        </div>
+      </a>
+      <a routerLink="{{ 'basicHref' | translate }}" fragment="who">
+        <div class="scroller">
+          <span>
+            {{ "WhoAre" | translate }}
+          </span>
+          <span>
+            {{ "WhoAre" | translate }}
+          </span>
+        </div>
+      </a>
       <!-- <a href="#cases">{{ "Cases" | translate }}</a> -->
     </div>
     <div class="button" (click)="showPopup()">{{ "Project" | translate }}</div>
@@ -75,8 +103,6 @@
       <div class="link row">
         <a href="#what">{{ "DoWhat" | translate }}</a>
         <div class="langs">
-          <!-- <a routerLink="/ru" (click)="switchRu()">Рус/</a>
-          <a routerLink="/ua" (click)="switchUa()">Укр</a> -->
           <a href="/ru">Рус/</a>
           <a href="/ua">Укр</a>
         </div>
