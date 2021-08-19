@@ -48,8 +48,11 @@
     }
   }
   .col3 {
-    align-self: flex-end;
-    width: max(50%, 300px);
+    display: flex;
+    width: 100%;
+    div {
+      width: 50%;
+    }
     h2 {
       font-weight: normal;
       font-size: max(1.25rem, 16px);
@@ -67,9 +70,12 @@
       width: 70%;
     }
   }
-  .back {
-    width: 82rem;
+  .mobile {
     display: none;
+  }
+
+  .back {
+    align-self: center;
     margin-top: 100px;
     margin-bottom: 36px;
     a {
@@ -89,6 +95,9 @@
   .case {
     .col3 {
       align-self: flex-start;
+      div {
+        width: 100%;
+      }
       p {
         display: none;
       }
@@ -96,8 +105,13 @@
     .col2 {
       order: 3;
     }
-    .back {
+
+    .mobile {
       display: block;
+      align-self: flex-start;
+    }
+    .default {
+      display: none;
     }
   }
 }
