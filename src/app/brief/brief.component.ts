@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { PostOrderService } from '../shared/post-order.service';
 interface Competitors {
   c1: string;
@@ -66,9 +67,14 @@ export class BriefComponent implements OnInit {
     c4: '',
   };
 
-  constructor(private service: PostOrderService) {}
+  constructor(
+    private service: PostOrderService,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentService = this.route.snapshot.paramMap.get('service') || '';
+  }
 
   toggleService(service: string): void {
     this.currentService === service

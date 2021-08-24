@@ -9,7 +9,9 @@
     </div>
     <div class="col2">
       <div class="fullRow">
-        <a routerLink="/brief" class="btn">Заполнить Бриф</a>
+        <a [routerLink]="['/brief', { service: 'Лендинг' }]" class="btn"
+          >Заполнить Бриф</a
+        >
       </div>
     </div>
     <div class="col3">
