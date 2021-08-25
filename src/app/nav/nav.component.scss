@@ -40,8 +40,7 @@ nav {
   align-items: center;
   padding-top: 6vh;
   .imgLogo {
-    // width: 18.5rem;
-    height: 25px;
+    height: max(1.25rem, 13px);
   }
   .sections {
     margin-left: auto;
@@ -51,9 +50,12 @@ nav {
       overflow: hidden;
       cursor: pointer;
       font-weight: 500;
-      font-size: max(1.2rem, 12px);
+      font-size: max(0.94rem, 12px);
       line-height: 130%;
-      margin-left: 2.4rem;
+      margin-left: 2rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
       &:hover {
         .scroller {
           transform: translateY(-50%);
@@ -83,12 +85,12 @@ nav {
     }
     background: none;
     color: white;
-    font-size: max(1.1rem, 12px);
+    font-size: max(0.84rem, 12px);
     line-height: 130%;
     letter-spacing: 0.02em;
     border: 0.15rem solid #fff;
     border-radius: 50px;
-    padding: 0.7rem 2.6rem;
+    padding: 0.57rem 1.93rem;
     margin-left: 3.5rem;
     animation: 20s infinite granimate;
   }
