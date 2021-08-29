@@ -15,7 +15,7 @@
     font-size: max(0.834rem, 12px);
     margin-bottom: 30px;
     line-height: 130%;
-    font-weight: 500;
+    font-weight: normal;
   }
   h2 {
     font-size: max(1.25rem, 18px);
@@ -26,6 +26,8 @@
     align-items: center;
     font-size: max(0.8rem, 14px);
     margin-bottom: 49px;
+    text-transform: uppercase;
+    font-weight: normal;
 
     svg {
       width: 1.6rem;

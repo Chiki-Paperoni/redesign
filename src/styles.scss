@@ -55,8 +55,11 @@ section {
   }
   a {
     transition: 0.1s;
+    background-color: #252525;
+
     &:hover {
       transform: translateY(-15px);
+      filter: drop-shadow(5px 5px 14px #ffffff);
     }
 
     .card {
@@ -64,25 +67,25 @@ section {
       display: flex;
       flex-direction: column;
       height: 100%;
-      // padding: 2.1rem 1.88rem;
-      padding: 40px 36px;
+
+      padding: 40px 36px 25px 36px;
       border: 1px solid #ffffff;
       box-sizing: border-box;
+
       border-radius: 8px;
       color: white;
 
       h2 {
         margin-bottom: 16px;
-        // margin-bottom: 0.8rem;
+
         font-size: 24px;
-        // font-size: 1.25rem;
+
         line-height: 130%;
       }
       p {
-        // font-size: 0.73rem;
         font-size: 14px;
-        margin-bottom: 61px;
-        // margin-bottom: 3.4rem;
+        margin-bottom: 36px;
+
         line-height: 150%;
         font-weight: normal;
       }
@@ -134,7 +137,7 @@ section {
       align-items: center;
       h3 {
         font-size: max(1.8rem, 18px);
-        margin-right: 3.3rem;
+        margin-right: 15px;
       }
       img {
         width: 2rem;
@@ -177,7 +180,8 @@ section {
   .cases {
     display: grid;
     grid-column-gap: 18px;
-    justify-content: space-between;
+    column-gap: 130px;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, max(280px, 25rem));
     .case {
       margin-bottom: 40px;
@@ -238,21 +242,25 @@ section {
         transition: 0.3s linear;
       }
       .blueFilter:hover {
-        filter: drop-shadow(0 0 240px #3137f8);
+        filter: drop-shadow(0 0 60px #3137f8);
       }
       .pinkFilter:hover {
-        filter: drop-shadow(0 0 240px #c64cff);
+        filter: drop-shadow(0 0 60px #c64cff);
       }
 
       .info {
         display: flex;
         flex-direction: column;
-        margin-left: 28px;
+        margin-left: 50px;
         div {
           font-size: 20px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 140%;
         }
         span {
-          margin-top: 1rem;
+          margin-top: 7px;
           font-size: 20px;
           color: #4cd4ff;
         }
@@ -269,29 +277,30 @@ section {
   padding: 5rem 0;
   form {
     width: 35%;
-    max-width: 420px;
+    max-width: 382px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
     label {
-      font-size: max(1rem, 12px);
+      font-size: 20px;
       margin-bottom: 1rem;
     }
     h3 {
       text-align: center;
-      font-size: max(2.5rem, 30px);
+      font-size: max(2.3rem, 30px);
       line-height: 130%;
       margin-bottom: 2.5rem;
     }
     input {
-      font-size: max(1rem, 12px);
+      font-size: 20px;
       background: none;
-      border: 0.18rem solid #fff;
+      border: 2px solid #fff;
       box-sizing: border-box;
       border-radius: 2.5rem;
-      padding: 1rem 1.8rem;
+      padding: 20px 33px;
       margin-bottom: 1.2rem;
       color: white;
+      border-radius: 50px;
     }
     input:focus::placeholder {
       color: transparent;
@@ -304,10 +313,10 @@ section {
       background-color: #252525;
     }
     button {
-      font-size: max(1rem, 12px);
-      padding: 1rem 7rem;
+      font-size: 16px;
+      padding: 23px 141px;
       background: #252525;
-      border-radius: 5rem;
+      border-radius: 50px;
       color: white;
       margin-top: 2rem;
       transition: 0.3s;
@@ -356,13 +365,14 @@ footer {
   .footer {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .col {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      margin-right: 6rem;
     }
     .start {
       justify-content: flex-start;
@@ -516,13 +526,6 @@ footer {
         font-size: 3.8rem;
         padding: 2.2rem 6rem;
       }
-    }
-  }
-}
-@media screen and(max-width:954px) {
-  #cases {
-    .cases {
-      justify-content: center;
     }
   }
 }
