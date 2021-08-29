@@ -8,39 +8,28 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NavComponent } from './nav/nav.component';
+
 import { MainComponent } from './main/main.component';
 import { TermsComponent } from './terms/terms.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { TermsUaComponent } from './terms-ua/terms-ua.component';
 import { BriefComponent } from './brief/brief.component';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { translateBrowserLoaderFactory } from './translate/loaders/translate-browser.loader';
 import { ClickPropagationStopDirective } from './shared/click-propagation-stop.directive';
 import { DigitOnlyDirective } from './shared/digit-only.directive';
-import { SuccessComponent } from './success/success.component';
-import { MarketingComponent } from './cases/marketing/marketing.component';
-import { LandingComponent } from './cases/landing/landing.component';
-import { BusinessComponent } from './cases/business/business.component';
-import { StoreComponent } from './cases/store/store.component';
+import { CasesModule } from './cases/cases.module';
+import { NavModule } from './shared/nav/nav.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent,
     MainComponent,
     TermsComponent,
     NotfoundComponent,
     ClickPropagationStopDirective,
     DigitOnlyDirective,
-    TermsUaComponent,
     BriefComponent,
-    SuccessComponent,
-    MarketingComponent,
-    LandingComponent,
-    BusinessComponent,
-    StoreComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -48,24 +37,18 @@ import { StoreComponent } from './cases/store/store.component';
     TransferHttpCacheModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      //added for server side translation
       loader: {
         provide: TranslateLoader,
-        useFactory: translateBrowserLoaderFactory,
+        useFactory: translateBrowserLoaderFactory, //added for server side translation
         deps: [HttpClient, TransferState],
       },
     }),
-    AppRoutingModule,
+
     FormsModule,
     ReactiveFormsModule,
-
-    // TranslateModule.forRoot({
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: httpTranslateLoader,
-    //     deps: [HttpClient],
-    //   },
-    // }),
+    CasesModule,
+    NavModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

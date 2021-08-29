@@ -1,6 +1,5 @@
 .case {
   overflow-y: auto;
-  display: grid;
   min-height: 100vh;
   background: url(/assets/img/cases.png) no-repeat center;
   background-size: cover;
@@ -8,7 +7,6 @@
   .container {
     display: flex;
     flex-direction: column;
-    width: 83rem;
   }
   .btn {
     width: max-content;
@@ -30,7 +28,7 @@
     p {
       font-style: normal;
       font-weight: normal;
-      font-size: max(0.9rem, 12px);
+      font-size: max(0.96rem, 12px);
       line-height: 21px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -38,10 +36,10 @@
     h1 {
       font-style: normal;
       font-weight: normal;
-      font-size: max(3.75rem, 28px);
-      line-height: max(4.5rem, 36px);
-      margin-top: max(4rem, 50px);
-      margin-bottom: max(2rem, 40px);
+      font-size: max(2.5rem, 28px);
+      line-height: max(3.5rem, 36px);
+      margin-top: max(3rem, 50px);
+      margin-bottom: max(1rem, 18px);
       span {
         color: #4cd4ff;
       }
@@ -55,7 +53,7 @@
     }
     h2 {
       font-weight: normal;
-      font-size: max(1.25rem, 16px);
+      font-size: max(1rem, 14px);
       line-height: 140%;
       font-style: normal;
       font-weight: normal;
@@ -64,10 +62,10 @@
     p {
       font-style: normal;
       font-weight: normal;
-      font-size: max(1.25rem, 18px);
+      font-size: max(1rem, 14px);
       line-height: 140%;
       color: #b8b8b8;
-      width: 70%;
+      width: 81%;
     }
   }
   .mobile {

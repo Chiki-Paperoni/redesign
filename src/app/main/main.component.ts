@@ -81,7 +81,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   scrollToAnchor(location: string, wait = 0): void {
-    //YOU CANT USE THIS LINE WITH SSR(NO document on server) User platformId, like in sample above
+    //YOU CANT USE THIS LINE WITH SSR(NO document on server) Use platformId, like in sample above
     const element = document.querySelector('#' + location);
     if (element) {
       setTimeout(() => {

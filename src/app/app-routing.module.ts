@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BriefComponent } from './brief/brief.component';
-import { BusinessComponent } from './cases/business/business.component';
-import { LandingComponent } from './cases/landing/landing.component';
-import { MarketingComponent } from './cases/marketing/marketing.component';
-import { StoreComponent } from './cases/store/store.component';
+
 import { MainComponent } from './main/main.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { TermsUaComponent } from './terms-ua/terms-ua.component';
 import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'ua', component: MainComponent },
   { path: 'ru', component: MainComponent },
+  {
+    path: 'cases',
+    loadChildren: () =>
+      import('./shared/nav/nav.module').then((m) => m.NavModule),
+  },
   { path: 'terms', component: TermsComponent },
-  { path: 'ua/terms', component: TermsUaComponent },
+  { path: 'ua/terms', component: TermsComponent },
+  { path: 'ru/terms', component: TermsComponent },
   { path: 'brief', component: BriefComponent },
-  { path: 'landing', component: LandingComponent },
-  { path: 'marketing', component: MarketingComponent },
-  { path: 'business', component: BusinessComponent },
-  { path: 'store', component: StoreComponent },
+
   { path: '**', component: NotfoundComponent },
 ];
 

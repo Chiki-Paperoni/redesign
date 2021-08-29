@@ -1,10 +1,8 @@
-import { ThisReceiver } from '@angular/compiler';
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { PostOrderService } from '../shared/post-order.service';
+import { PostOrderService } from '../post-order.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
@@ -25,8 +23,7 @@ export class NavComponent implements OnInit {
     private formBuilder: FormBuilder,
     private service: PostOrderService,
     public translate: TranslateService,
-    private router: Router,
-    private viewportScroller: ViewportScroller
+    private router: Router
   ) {}
 
   ngOnInit(): void {

@@ -1,212 +1,206 @@
 <app-header></app-header>
-<div class="container">
-  <section id="what" #what>
-    <h2>
-      <pre>
-{{"What.h2.part1"|translate}} <span>{{"What.h2.part2"|translate}}</span>
-              {{"What.h2.part3"|translate}} <span>{{"What.h2.part4"|translate}}</span>
-      </pre>
-    </h2>
-    <div class="cards">
-      <a routerLink="/landing">
-        <div
-          class="card upleft"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
+<div class="sectionsbg">
+  <div class="container">
+    <section id="what" #what>
+      <h2>
+        <pre>
+  {{"What.h2.part1"|translate}} <span>{{"What.h2.part2"|translate}}</span>
+                {{"What.h2.part3"|translate}} <span>{{"What.h2.part4"|translate}}</span>
+        </pre>
+      </h2>
+      <div class="cards">
+        <a routerLink="/cases/landing">
+          <div
+            class="card upleft"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <h2>{{ "What.card1.h2" | translate }}</h2>
+            <p>
+              {{ "What.card1.p" | translate }}
+            </p>
+            <div class="info">
+              <span class="terms">{{ "What.card1.terms" | translate }}</span>
+              <span class="price">{{ "What.card1.price" | translate }}</span>
+            </div>
+          </div></a
         >
-          <h2>{{ "What.card1.h2" | translate }}</h2>
-          <p>
-            {{ "What.card1.p" | translate }}
-          </p>
-          <div class="info">
-            <span class="terms">{{ "What.card1.terms" | translate }}</span>
-            <span class="price">{{ "What.card1.price" | translate }}</span>
-          </div>
-        </div></a
-      >
 
-      <a routerLink="/business">
-        <div
-          class="card upright"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
+        <a routerLink="/cases/business">
+          <div
+            class="card upright"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <h2>{{ "What.card2.h2" | translate }}</h2>
+            <p>
+              {{ "What.card2.p" | translate }}
+            </p>
+            <div class="info">
+              <span class="terms">{{ "What.card2.terms" | translate }}</span>
+              <span class="price">{{ "What.card2.price" | translate }}</span>
+            </div>
+          </div></a
         >
-          <h2>{{ "What.card2.h2" | translate }}</h2>
-          <p>
-            {{ "What.card2.p" | translate }}
-          </p>
-          <div class="info">
-            <span class="terms">{{ "What.card2.terms" | translate }}</span>
-            <span class="price">{{ "What.card2.price" | translate }}</span>
-          </div>
-        </div></a
-      >
-    </div>
+      </div>
 
-    <div class="cards">
-      <a routerLink="/store">
-        <div
-          class="card upright"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <h2>{{ "What.card3.h2" | translate }}</h2>
-          <p>
-            {{ "What.card3.p" | translate }}
-          </p>
-          <div class="info">
-            <span class="terms">{{ "What.card3.terms" | translate }}</span>
-            <span class="price">{{ "What.card3.price" | translate }}</span>
+      <div class="cards">
+        <a routerLink="/cases/store">
+          <div
+            class="card upright"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <h2>{{ "What.card3.h2" | translate }}</h2>
+            <p>
+              {{ "What.card3.p" | translate }}
+            </p>
+            <div class="info">
+              <span class="terms">{{ "What.card3.terms" | translate }}</span>
+              <span class="price">{{ "What.card3.price" | translate }}</span>
+            </div>
           </div>
-        </div>
-      </a>
-      <a routerLink="/marketing">
-        <div
-          class="card downleft"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
+        </a>
+        <a routerLink="/cases/marketing">
+          <div
+            class="card downleft"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <h2>{{ "What.card4.h2" | translate }}</h2>
+            <p>
+              {{ "What.card4.p" | translate }}
+            </p>
+            <div class="info">
+              <span class="terms">{{ "What.card4.terms" | translate }}</span>
+              <span class="price"
+                >$500
+                <span style="color: white">{{
+                  "What.card4.price" | translate
+                }}</span></span
+              >
+            </div>
+          </div></a
         >
-          <h2>{{ "What.card4.h2" | translate }}</h2>
-          <p>
-            {{ "What.card4.p" | translate }}
-          </p>
-          <div class="info">
-            <span class="terms">{{ "What.card4.terms" | translate }}</span>
-            <span class="price"
-              >$500
-              <span style="color: white">{{
-                "What.card4.price" | translate
-              }}</span></span
-            >
-          </div>
-        </div></a
-      >
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="how" #how>
-    <h2>
-      <pre>
-{{"How.h2.part1"|translate}} <span>{{"How.h2.part2"|translate}}</span>
-                      {{"How.h2.part3"|translate}} <span>{{"How.h2.part4"|translate}}</span>
-      </pre>
-    </h2>
-    <div class="steps">
-      <div
-        class="step"
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-once="true"
-      >
-        <div class="title">
-          <h3>{{ "How.step1.h3" | translate }}</h3>
-          <img src="/assets/img/step1.svg" alt="" srcset="" />
-        </div>
-        <div class="description">
-          <pre>
+    <section id="how" #how>
+      <h2>
+        <pre>
+  {{"How.h2.part1"|translate}} <span>{{"How.h2.part2"|translate}}</span>
+                        {{"How.h2.part3"|translate}} <span>{{"How.h2.part4"|translate}}</span>
+        </pre>
+      </h2>
+      <div class="steps">
+        <div
+          class="step"
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-once="true"
+        >
+          <div class="title">
+            <h3>{{ "How.step1.h3" | translate }}</h3>
+            <img src="/assets/img/step1.svg" alt="" srcset="" />
+          </div>
+          <div class="description">
             {{ "How.step1.description.line1" | translate }}
-            {{ "How.step1.description.line2" | translate }}</pre
-          >
+            {{ "How.step1.description.line2" | translate }}
+          </div>
+          <div class="arrow right">
+            <div class="curtains"><div class="bg"></div></div>
+            <img src="/assets/img/vector1.png" alt="" srcset="" />
+          </div>
         </div>
-        <div class="arrow right">
-          <div class="curtains"><div class="bg"></div></div>
-          <img src="/assets/img/vector1.svg" alt="" srcset="" />
+        <div
+          class="step"
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-once="true"
+        >
+          <div class="title">
+            <h3>
+              {{ "How.step2.h3" | translate }}
+            </h3>
+            <img src="/assets/img/step2.svg" alt="" srcset="" />
+          </div>
+          <div class="description">
+            {{ "How.step2.description.line1" | translate }}
+            {{ "How.step2.description.line2" | translate }}
+          </div>
+          <div class="arrow">
+            <div class="curtains"><div class="bg"></div></div>
+            <img src="/assets/img/vector2.png" alt="" srcset="" />
+          </div>
         </div>
-      </div>
-      <div
-        class="step"
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-once="true"
-      >
-        <div class="title">
-          <h3>
-            <pre>                 {{ "How.step2.h3" | translate }} </pre>
-          </h3>
-          <img src="/assets/img/step2.svg" alt="" srcset="" />
+        <div
+          class="step"
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-once="true"
+        >
+          <div class="title">
+            <h3>
+              {{ "How.step3.h3" | translate }}
+            </h3>
+            <img src="/assets/img/step3.svg" alt="" srcset="" />
+          </div>
+          <div class="description">
+            {{ "How.step3.description.line1" | translate }}
+            {{ "How.step3.description.line2" | translate }}
+          </div>
+          <div class="arrow right">
+            <div class="curtains"><div class="bg"></div></div>
+            <img src="/assets/img/vector3.png" alt="" srcset="" />
+          </div>
         </div>
-        <div class="description">
-          <pre>
-                    {{ "How.step2.description.line1" | translate }}
-                            {{ "How.step2.description.line2" | translate }}</pre
-          >
-        </div>
-        <div class="arrow">
-          <div class="curtains"><div class="bg"></div></div>
-          <img src="/assets/img/vector2.svg" alt="" srcset="" />
-        </div>
-      </div>
-      <div
-        class="step"
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-once="true"
-      >
-        <div class="title">
-          <h3>
-            <pre>                 {{ "How.step3.h3" | translate }}</pre>
-          </h3>
-          <img src="/assets/img/step3.svg" alt="" srcset="" />
-        </div>
-        <div class="description">
-          <pre>
-                            {{ "How.step3.description.line1" | translate }}
-                            {{ "How.step3.description.line2" | translate }}</pre
-          >
-        </div>
-        <div class="arrow right">
-          <div class="curtains"><div class="bg"></div></div>
-          <img src="/assets/img/vector3.svg" alt="" srcset="" />
-        </div>
-      </div>
-      <div
-        class="step"
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-once="true"
-      >
-        <div class="title">
-          <h3>
-            <pre>     {{ "How.step4.h3" | translate }}</pre>
-          </h3>
-          <img src="/assets/img/step4.svg" alt="" srcset="" />
-        </div>
-        <div class="description">
-          <pre>
+        <div
+          class="step"
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-once="true"
+        >
+          <div class="title">
+            <h3>
+              {{ "How.step4.h3" | translate }}
+            </h3>
+            <img src="/assets/img/step4.svg" alt="" srcset="" />
+          </div>
+          <div class="description">
             {{ "How.step4.description.line1" | translate }}
-            {{ "How.step4.description.line2" | translate }}</pre
-          >
+            {{ "How.step4.description.line2" | translate }}
+          </div>
+          <div class="arrow">
+            <div class="curtains"><div class="bg"></div></div>
+            <img src="/assets/img/vector4.png" alt="" srcset="" />
+          </div>
         </div>
-        <div class="arrow">
-          <div class="curtains"><div class="bg"></div></div>
-          <img src="/assets/img/vector4.svg" alt="" srcset="" />
-        </div>
-      </div>
-      <div
-        class="step"
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-once="true"
-      >
-        <div class="title">
-          <h3>
-            <pre>             {{ "How.step5.h3" | translate }}</pre>
-          </h3>
-          <img src="/assets/img/step5.svg" alt="" srcset="" />
-        </div>
-        <div class="description">
-          <pre>
-                    {{ "How.step5.description.line1" | translate }}
-                    {{ "How.step5.description.line2" | translate }}</pre
-          >
+        <div
+          class="step"
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-once="true"
+        >
+          <div class="title">
+            <h3>
+              {{ "How.step5.h3" | translate }}
+            </h3>
+            <img src="/assets/img/step5.svg" alt="" srcset="" />
+          </div>
+          <div class="description">
+            {{ "How.step5.description.line1" | translate }}
+            {{ "How.step5.description.line2" | translate }}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+</div>
+<div class="container">
   <section id="cases">
     <h2>
       {{ "Casess.h2.part1" | translate }}
@@ -220,10 +214,9 @@
         data-aos-duration="1750"
         data-aos-once="true"
       >
-        <!-- fade-down-right -->
         <p class="title">Промо-сайт «Банки»</p>
         <a class="bg1" href="https://promowebsite.herokuapp.com/">
-          <!-- <img src="/assets/img/case1.png" alt="" /> -->
+          <img src="/assets/img/case1.png" alt="" />
           <div class="block">
             <div class="btn">Банка</div>
           </div>
@@ -237,7 +230,7 @@
       >
         <p class="title">Сайт для школы</p>
         <a class="bg2">
-          <!-- <img src="/assets/img/case2.png" alt="" /> -->
+          <img src="/assets/img/case2.png" alt="" />
           <div class="block">
             <div class="btn">Школа</div>
           </div>
@@ -253,35 +246,37 @@
 {{"Who.h2.part4"|translate}} 
       </pre>
     </h2>
-
-    <div class="row">
-      <img class="whoImg blueFilter" src="/assets/img/dn.png" alt="" />
-      <div class="info">
-        <div>Даня</div>
-        <span>Project Manager</span>
+    <div class="line">
+      <div class="row">
+        <img class="whoImg blueFilter" src="/assets/img/dn.png" alt="" />
+        <div class="info">
+          <div>Даня</div>
+          <span>Project Manager</span>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="info">
-        <div>Даша</div>
-        <span>UI/UX Designer</span>
+      <div class="row">
+        <img class="whoImg pinkFilter" src="/assets/img/dsh.png" alt="" />
+        <div class="info">
+          <div>Даша</div>
+          <span>UI/UX Designer</span>
+        </div>
       </div>
-      <img class="whoImg pinkFilter" src="/assets/img/dsh.png" alt="" />
-    </div>
-    <div class="row">
-      <img class="whoImg blueFilter" src="/assets/img/zh.png" alt="" />
-      <div class="info">
-        <div>{{ "Who.Zhenia" | translate }}</div>
-        <span>Frontend Developer</span>
+      <div class="row">
+        <img class="whoImg blueFilter" src="/assets/img/zh.png" alt="" />
+        <div class="info">
+          <div>{{ "Who.Zhenia" | translate }}</div>
+          <span>Frontend Developer</span>
+        </div>
       </div>
     </div>
   </section>
 </div>
 
 <div class="inst">
+  <div class="bg"></div>
   <div class="text">
-    <div class="container">
+    <div class="wrap">
       {{ "inst" | translate }}
       <a href="https://www.instagram.com/katrukdesign/">@katrukdesign</a
       ><span><img src="/assets/img/instagram.svg" alt="" /></span>
@@ -325,29 +320,19 @@
 
 <footer>
   <div class="container">
-    <div class="info">
-      <div class="row">
-        <span class="email">katrukdesign@gmail.com</span>
-        <span class="phone">
-          <a href="tel:+380930600970">+38 093 060 0970</a>
+    <div class="footer">
+      <div class="col">
+        <img class="footerLogo" src="/assets/img/logo.svg" alt="" />
+        <span class="terms">
+          <span>© 2021</span>
+          <a [routerLink]="termsLink">{{ "Terms" | translate }}</a>
         </span>
       </div>
-      <div class="row">
-        <div class="col">
-          <span class="lang">
-            <a routerLink="/ru" (click)="switchRu()">Рус/</a>
-            <a routerLink="/ua" (click)="switchUa()">Укр</a>
-          </span>
-          <span class="terms">
-            <span>© 2021</span>
-            <a [routerLink]="termsLink">{{ "Terms" | translate }}</a>
-          </span>
-        </div>
+      <div class="col">
+        <p class="contact">Связаться с нами</p>
         <div class="socials">
           <span>
             <a href="https://telegram.me/katrukdesign">
-              <!-- <img src="/assets/img/telegram.svg" alt="" /> -->
-
               <svg
                 width="50"
                 height="51"
@@ -396,8 +381,18 @@
             </a>
           </span>
         </div>
+        <span class="lang">
+          <a routerLink="/ru" (click)="switchRu()">Рус</a>
+          /
+          <a routerLink="/ua" (click)="switchUa()">Укр</a>
+        </span>
+      </div>
+      <div class="col start">
+        <span class="email">katrukdesign@gmail.com</span>
+        <span class="phone">
+          <a href="tel:+380930600970">+38 093 060 0970</a>
+        </span>
       </div>
     </div>
-    <div class="logo"><img src="/assets/img/singlelogo.svg" alt="" /></div>
   </div>
 </footer>

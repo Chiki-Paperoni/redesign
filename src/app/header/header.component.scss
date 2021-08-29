@@ -10,8 +10,12 @@ header {
     right: 5%;
     .arrow {
       img {
+        transition: 0.3s;
         height: 4rem;
         min-height: 60px;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
       align-self: flex-end;
       cursor: pointer;
@@ -26,7 +30,7 @@ header {
   }
 
   .caption {
-    font-size: 5.4rem;
+    font-size: 4rem;
     margin-top: 17vh;
     font-weight: 500;
     line-height: 130%;
@@ -36,7 +40,7 @@ header {
 @media screen and(max-width:856px) {
   header {
     .caption {
-      font-size: 7.6rem;
+      font-size: 5.6rem;
     }
   }
 }

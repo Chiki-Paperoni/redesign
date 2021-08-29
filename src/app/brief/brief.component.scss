@@ -1,17 +1,17 @@
 .brief {
   color: white;
-  padding-left: 7rem;
-  padding-top: 12rem;
+
+  padding-top: 5rem;
   .hide {
     display: none;
   }
   h1 {
-    font-size: 4rem;
-    margin-bottom: 6rem;
+    font-size: 1.82rem;
+    margin-bottom: 32px;
   }
   p {
-    font-size: 2.5rem;
-    margin-bottom: 3.2rem;
+    font-size: 1.25rem;
+    margin-bottom: 28px;
   }
   input {
     -webkit-appearance: none;
@@ -26,41 +26,37 @@
     background-color: #252525 !important;
     border-radius: 0 !important;
     color: white !important;
-    font-size: 1.2rem;
-    padding: 0.8rem 0;
+    font-size: 16px;
+    padding: 8px 0;
   }
 
   .tip {
-    font-size: 1.25rem;
-    margin-bottom: 3.5rem;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
     color: #a3a3a3;
   }
   .content {
-    margin-bottom: 4.6rem;
+    margin-bottom: 2.6rem;
   }
   .line {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
   }
   .services {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
   .btn {
     color: white;
     box-sizing: border-box;
-    font-size: 1.2rem;
-    padding: 1.5rem 2.5rem;
+    font-size: 16px;
+    padding: 13px 40px;
     background: none;
     border-radius: 2.5rem;
-    border: 0.24rem solid white;
+    border: 2px solid white;
     margin-right: 1rem;
   }
   .active {
     border-color: #252525;
-    background: linear-gradient(
-      180deg,
-      rgba(158, 0, 255, 0.7) 0%,
-      #4cd4ff 100%
-    );
+    background: linear-gradient(90deg, #b042e4 0%, #2d33e4 100%);
   }
   .inputLine {
     margin-bottom: 4.6rem;
@@ -74,18 +70,18 @@
   }
   .inputList {
     .pre {
-      padding: 0.8rem 0.8rem 0.8rem 0;
+      padding: 8px 8px 8px 0;
     }
     .row {
       display: flex;
-      margin-bottom: 4.6rem;
+      margin-bottom: 2.6rem;
     }
     p {
       margin-bottom: 0.6rem;
     }
     .border-btm {
       display: flex;
-      align-items: flex-end;
+      align-items: baseline;
       margin-right: 2rem;
       width: 50%;
     }
@@ -99,11 +95,11 @@
   }
   .langs,
   .terms {
-    margin-bottom: 4.6rem;
+    margin-bottom: 2.6rem;
     .row {
       display: flex;
       align-items: center;
-      font-size: 1.25rem;
+      font-size: 0.8rem;
       margin-bottom: 1.25rem;
       position: relative;
     }
@@ -115,18 +111,22 @@
     }
     span {
       margin-right: 1.2rem;
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.3rem;
+      height: 1.3rem;
       border: 0.16rem solid #fff;
       border-radius: 50%;
     }
   }
   .send {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 6rem;
-    margin-top: 7rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
     .btn {
+      background-color: white;
+      color: black;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 15px 45px;
+      border-radius: 6rem;
       &:hover {
         border-color: #252525;
         background: linear-gradient(
@@ -135,9 +135,6 @@
           #4cd4ff 100%
         );
       }
-      font-size: 2.5rem;
-      padding: 2.2rem 12rem;
-      border-radius: 6rem;
     }
   }
 }
