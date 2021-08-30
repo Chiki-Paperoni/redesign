@@ -7,7 +7,7 @@ import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
   {
-    path: 'cases',
+    path: '',
     component: LandingComponent,
     children: [
       { path: 'marketing', component: MarketingComponent },

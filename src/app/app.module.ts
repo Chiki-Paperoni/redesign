@@ -17,7 +17,6 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { translateBrowserLoaderFactory } from './translate/loaders/translate-browser.loader';
 import { ClickPropagationStopDirective } from './shared/click-propagation-stop.directive';
 import { DigitOnlyDirective } from './shared/digit-only.directive';
-import { CasesModule } from './cases/cases.module';
 import { NavModule } from './shared/nav/nav.module';
 
 @NgModule({
@@ -46,7 +45,6 @@ import { NavModule } from './shared/nav/nav.module';
 
     FormsModule,
     ReactiveFormsModule,
-    CasesModule,
     NavModule,
     AppRoutingModule,
   ],

@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'cases',
     loadChildren: () =>
-      import('./shared/nav/nav.module').then((m) => m.NavModule),
+      import('./cases/cases.module').then((m) => m.CasesModule),
   },
   { path: 'terms', component: TermsComponent },
   { path: 'ua/terms', component: TermsComponent },
