@@ -67,6 +67,7 @@ export class NavComponent implements OnInit {
     this.translate.use('ua');
   }
   onSubmit(): void {
+    console.log(2323);
     if (this.orderForm.valid) {
       const result = `Заказ\nИмя: ${this.orderForm.value.name}\nНомер: ${this.orderForm.value.phone}`;
       this.service.post(result).subscribe((data) => {

@@ -58,7 +58,7 @@
         [formGroup]="orderForm"
         (ngSubmit)="onSubmit()"
         autocomplete="off"
-        appClickPropagationStop
+        (click)="$event.stopPropagation()"
       >
         <h3>{{ "Popup.title" | translate }}</h3>
         <label for="name">{{ "Popup.name.text" | translate }}</label>
