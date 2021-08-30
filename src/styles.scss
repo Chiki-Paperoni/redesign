@@ -55,11 +55,11 @@ section {
   }
   a {
     transition: 0.1s;
-    background-color: #252525;
 
     &:hover {
       transform: translateY(-15px);
-      filter: drop-shadow(5px 5px 14px #ffffff);
+
+      box-shadow: 5px 5px 14px #ffffff;
     }
 
     .card {
@@ -331,6 +331,7 @@ section {
   position: relative;
   margin: 5rem 0;
   .bg {
+    z-index: 0;
     position: absolute;
     inset: 0;
     border: 1px solid #ffffff;
@@ -339,6 +340,7 @@ section {
     transform: rotate(-2.28deg) scale(1.1);
   }
   .text {
+    z-index: 1;
     display: flex;
     justify-content: center;
     border-radius: 1.4rem;
@@ -348,6 +350,7 @@ section {
     color: black;
     font-size: max(1.8rem, 16px);
     padding: 2.5rem 0;
+    position: relative;
     .wrap {
       width: 60%;
       min-width: 328px;
