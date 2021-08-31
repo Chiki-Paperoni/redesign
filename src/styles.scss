@@ -118,7 +118,7 @@ section {
   }
   .aos-animate {
     .curtains {
-      padding-top: 5rem !important;
+      padding-top: max(5rem, 40px) !important;
     }
   }
   .step:nth-of-type(2),
@@ -128,9 +128,14 @@ section {
       margin-left: 4rem;
     }
   }
+  .steps {
+    width: 54%;
+    margin: 0 auto;
+    min-width: 340px;
+  }
   .step {
     margin-bottom: 1.8rem;
-    margin-left: 12rem;
+
     .title {
       margin-bottom: 1.4rem;
       display: flex;
@@ -147,16 +152,18 @@ section {
       font-size: max(1.1rem, 14px);
       line-height: 130%;
       font-weight: normal;
-      max-width: 500px;
+
+      // width: 67%;
+      min-width: 334px;
+
       margin-bottom: 1rem;
     }
     .right {
-      margin-right: 25%;
       flex-direction: row-reverse;
     }
     .curtains {
       position: absolute;
-      height: 5rem;
+      height: max(5rem, 40px);
       transition: 3s;
       width: 70px;
       .bg {
@@ -168,7 +175,7 @@ section {
     .arrow {
       display: flex;
       img {
-        height: 5rem;
+        height: max(5rem, 40px);
       }
     }
   }
@@ -195,9 +202,18 @@ section {
         font-size: max(1.6rem, 16px);
         margin-bottom: max(1.6rem, 12px);
       }
+      .bg1 {
+        .block {
+          background-color: #6a23e6;
+        }
+      }
+      .bg2 {
+        .block {
+          background-color: rgb(27 22 128);
+        }
+      }
       a {
         transition: 0.3s;
-        height: 100%;
         &:hover {
           .block {
             opacity: 1;
@@ -209,6 +225,7 @@ section {
         img {
           width: 100%;
         }
+
         .block {
           transition: 0.3s;
           position: absolute;
@@ -221,7 +238,6 @@ section {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: rgb(27 22 128);
           .btn {
             font-size: max(1.6rem, 14px);
           }
