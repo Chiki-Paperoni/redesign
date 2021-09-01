@@ -58,8 +58,9 @@ section {
 
     &:hover {
       transform: translateY(-15px);
-
-      box-shadow: 5px 5px 14px #ffffff;
+      .card {
+        box-shadow: 5px 5px 14px #ffffff;
+      }
     }
 
     .card {
