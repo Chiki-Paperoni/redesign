@@ -17,41 +17,56 @@
       display: none;
     }
   }
+  #who {
+    .line {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 84px;
+      .row {
+        .whoImg {
+          width: 223px;
+        }
+
+        .info {
+          margin-left: 0;
+          div {
+            text-align: center;
+          }
+          span {
+          }
+        }
+      }
+    }
+  }
 
   footer {
     .container {
-      align-items: center;
-      .row {
-        flex-direction: column;
-        align-items: flex-start;
+      display: flex;
+      .footerLogoImg {
+        display: block;
+      }
+    }
+    .footer {
+      flex-direction: column-reverse;
 
+      .socials {
+        margin-bottom: 15px;
+      }
+      .col {
         .email {
-          font-size: 4.2rem;
+          margin-bottom: 13px;
+        }
+        .phone {
+          margin-bottom: 17px;
+        }
+        .contact {
+          display: none;
+        }
+        .footerLogo {
+          display: none;
         }
         .lang {
           display: none;
-        }
-        .terms {
-          font-size: 2.2rem;
-        }
-        .phone {
-          font-size: 2.8rem;
-        }
-        .socials {
-          margin-bottom: 4rem;
-          span {
-            svg {
-              width: 6.7rem;
-            }
-          }
-        }
-        .col {
-          order: 2;
-        }
-      }
-      .logo {
-        img {
-          height: 20rem;
         }
       }
     }

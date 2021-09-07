@@ -30,17 +30,9 @@ header {
   }
 
   .caption {
-    font-size: 4rem;
+    font-size: max(4rem, 30px);
     margin-top: 22vh;
     font-weight: 500;
     line-height: 130%;
-  }
-}
-
-@media screen and(max-width:856px) {
-  header {
-    .caption {
-      font-size: 5.6rem;
-    }
   }
 }
