@@ -340,40 +340,42 @@ section {
     }
   }
 }
-.inst {
-  position: relative;
-  margin: 5rem 0;
-  .bg {
-    z-index: 0;
-    position: absolute;
-    inset: 0;
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    border-radius: 70px;
-    transform: rotate(-2.28deg) scale(1.1);
+#inst {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: max(6rem, 48px);
+  margin-bottom: 30px;
+  row-gap: 30px;
+  .posts {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 30px;
+      margin-bottom: 30px;
+      column-gap: 30px;
+      a {
+        img {
+          width: max(17rem, 280px);
+        }
+      }
+    }
   }
   .text {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    border-radius: 1.4rem;
-    font-weight: 500;
-    line-height: 140%;
-    background-color: white;
-    color: black;
-    font-size: max(1.8rem, 16px);
-    padding: 2.5rem 0;
-    position: relative;
-    .wrap {
-      width: 60%;
-      min-width: 328px;
-      max-width: 800px;
+    max-width: 330px;
+    h2 {
+      font-size: max(1.875rem, 24px);
+      line-height: 124.5%;
+      font-style: normal;
+      margin-bottom: 26px;
     }
-    a {
-      color: #454ada;
-    }
-    span img {
-      width: max(2.5rem, 25px);
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 130%;
+      // margin-bottom: 30px;
     }
   }
 }
