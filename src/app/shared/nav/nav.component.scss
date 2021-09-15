@@ -70,19 +70,6 @@ nav {
   }
   .button {
     cursor: pointer;
-    &:hover {
-      border-color: transparent;
-      background-image: linear-gradient(
-        90deg,
-        #b042e4,
-        #2d33e4,
-        #b042e4,
-        #36ecd6,
-        #9a23b8,
-        #56e6fa
-      );
-      background-size: 400% 400%;
-    }
     background: none;
     color: white;
     font-size: max(0.84rem, 12px);
@@ -92,7 +79,10 @@ nav {
     border-radius: 50px;
     padding: 0.57rem 1.93rem;
     margin-left: 3.5rem;
-    animation: 20s infinite granimate;
+    transition: 0.15s;
+    &:hover {
+      filter: drop-shadow(3px 3px 15px rgba(255, 255, 255, 0.43));
+    }
   }
   #popup {
     z-index: 999;
@@ -150,20 +140,15 @@ nav {
         margin-bottom: 16px;
       }
       button {
-        transition: 0.4s;
         background: white;
         color: black;
         font-size: 1.8rem;
         padding: 1.2rem 6rem;
         border-radius: 5rem;
         margin-top: 2rem;
+        transition: 0.15s;
         &:hover {
-          color: white;
-          background: linear-gradient(
-            180deg,
-            rgba(158, 0, 255, 0.7) 0%,
-            #4cd4ff 100%
-          );
+          filter: drop-shadow(3px 3px 15px rgba(255, 255, 255, 0.43));
         }
       }
     }

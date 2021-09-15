@@ -305,7 +305,7 @@ section {
       margin-bottom: 2.5rem;
     }
     input {
-      font-size: max(1.24rem, 12px);
+      font-size: max(1.04rem, 12px);
       background: none;
       border: max(0.104rem, 1px) solid #fff;
       box-sizing: border-box;
@@ -328,14 +328,13 @@ section {
     button {
       font-size: max(0.83rem, 12px);
       padding: max(1.2rem, 10px) 0;
-      background: #252525;
+      background: white;
       border-radius: 50px;
-      color: white;
+      color: #252525;
       margin-top: 2rem;
       transition: 0.3s;
       &:hover {
-        color: #252525;
-        background-color: white;
+        filter: drop-shadow(3px 3px 15px rgba(255, 255, 255, 0.43));
       }
     }
   }
