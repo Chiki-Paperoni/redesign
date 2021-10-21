@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // platformBrowserDynamic()
 //   .bootstrapModule(AppModule)
+
 //   .then((moduleRef) => {
 //     const applicationRef = moduleRef.injector.get(ApplicationRef);
 //     const componentRef = applicationRef.components[0];
