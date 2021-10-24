@@ -18,6 +18,6 @@ export class PostOrderService {
         'Content-Type': 'text/plain',
       }),
     };
-    return this.http.post<Object>('api/briefs', text, httpOptions);
+    return this.http.post<Object>('api/post', text, httpOptions);
   }
 }
